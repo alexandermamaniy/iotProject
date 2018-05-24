@@ -9,41 +9,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
-
-  <!-- update the version number as needed -->
-  <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
-  <!-- include only the Firebase features as you need -->
-  <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
-  <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
-  <script defer src="/__/firebase/3.9.0/firebase-messaging.js"></script>
-  <script defer src="/__/firebase/3.9.0/firebase-storage.js"></script>
-  <!-- initialize the SDK after all desired features are loaded -->
-  <script defer src="/__/firebase/init.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-  <script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyA15Ur499JuoOi01xQqUBnYm474XlVte1w",
-      authDomain: "domotica-9d4f0.firebaseapp.com",
-      databaseURL: "https://domotica-9d4f0.firebaseio.com",
-      projectId: "domotica-9d4f0",
-      storageBucket: "domotica-9d4f0.appspot.com",
-      messagingSenderId: "594633281122"
-    };
-    firebase.initializeApp(config);
-  </script>
+
+
   <link rel="stylesheet" href="{% static 'css/actions.css' %}">
+  <link rel="stylesheet" href="{% static 'css/examples.css' %}">
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -58,7 +40,7 @@
   </nav>
 
   <div class="jumbotron text-center">
-    <h1>CSESI</h1>
+    <h1>ROXANNA</h1>
     <p>PROYECTO DOMOTICA</p>
 
   </div>
@@ -321,13 +303,27 @@
   </div>
 
 
+    <div id="content">
+
+        <div class="demo-container">
+            <div id="placeholder" class="demo-placeholder"></div>
+        </div>
+
+        <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
+
+        <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
+
+    </div>
+
+
+
 
     <footer class="container-fluid text-center">
       <a href="#myPage" title="To Top">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a>
-
+        <span class="glyphicon glyphicon-chevron-up"></span>
+      </a>
     </footer>
+
 
     <script>
       $(document).ready(function () {
@@ -368,6 +364,10 @@
 
 
     <script src="{% static 'js/actions.js' %}" ></script>
+
+    <script src="{% static 'js/jquery.js' %}" ></script>
+    <script src="{% static 'js/jquery.flot.js' %}" ></script>
+    <script src="{% static 'js/realtime.js' %}" ></script>
 
 </body>
 
