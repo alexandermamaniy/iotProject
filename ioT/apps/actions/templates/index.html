@@ -1,0 +1,374 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>INTERFACE Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/3.9.0/firebase-app.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/3.9.0/firebase-auth.js"></script>
+  <script defer src="/__/firebase/3.9.0/firebase-database.js"></script>
+  <script defer src="/__/firebase/3.9.0/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/3.9.0/firebase-storage.js"></script>
+  <!-- initialize the SDK after all desired features are loaded -->
+  <script defer src="/__/firebase/init.js"></script>
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyA15Ur499JuoOi01xQqUBnYm474XlVte1w",
+      authDomain: "domotica-9d4f0.firebaseapp.com",
+      databaseURL: "https://domotica-9d4f0.firebaseio.com",
+      projectId: "domotica-9d4f0",
+      storageBucket: "domotica-9d4f0.appspot.com",
+      messagingSenderId: "594633281122"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <link rel="stylesheet" href="{% static 'css/actions.css' %}">
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+
+        <a class="navbar-brand" href="#myPage">BIENVENIDO!</a>
+      </div>      
+    </div>
+  </nav>
+
+  <div class="jumbotron text-center">
+    <h1>CSESI</h1>
+    <p>PROYECTO DOMOTICA</p>
+
+  </div>
+
+  <!-- Container (Control Section) -->
+  <div id="control" class="container-fluid">
+    <div class="text-center">
+      <h2>CONTROL</h2>
+    </div>
+
+    <div class="row slideanim">
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>GENERAL</h1>
+          </div>
+          <div class="panel-body">
+
+            <br>
+            <p><del>Luces</del></p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesFront">
+              <label class="onoffswitch-label" for="checkLucesFront">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+            <p>Puerta Principal</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaP">
+              <label class="onoffswitch-label" for="checkPuertaP">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+            <!--
+            <p>Puerta Trasera</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaT">
+              <label class="onoffswitch-label" for="checkPuertaT">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>-
+            -->
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>SALA</h1>
+          </div>
+          <div class="panel-body">
+
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesS">
+              <label class="onoffswitch-label" for="checkLucesS">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+         <!--   <p>Ventilador</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentS">
+              <label class="onoffswitch-label" for="checkVentS">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+            </div>  -->
+
+
+            <p>Ventana</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinS">
+              <label class="onoffswitch-label" for="checkWinS">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>RECAMARA 1</h1>
+          </div>
+          <div class="panel-body">
+
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesR1">
+              <label class="onoffswitch-label" for="checkLucesR1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+            <p>Ventilador</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentR1">
+              <label class="onoffswitch-label" for="checkVentR1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+            <p>Ventana</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinR1">
+              <label class="onoffswitch-label" for="checkWinR1">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row slideanim">
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>RECAMARA 2</h1>
+          </div>
+          <div class="panel-body">
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesR2">
+              <label class="onoffswitch-label" for="checkLucesR2">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+            <p>Ventilador</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentR2">
+              <label class="onoffswitch-label" for="checkVentR2">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+
+
+            <p>Ventana</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinR2">
+              <label class="onoffswitch-label" for="checkWinR2">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>COCINA</h1>
+          </div>
+          <div class="panel-body">
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesCS">
+              <label class="onoffswitch-label" for="checkLucesCS">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+            <p>Ventilador</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentC">
+              <label class="onoffswitch-label" for="checkVentC">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading2">
+            <h3>CUARTO DE SERVICIO</h3>
+          </div>
+          <div class="panel-body">
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesServ">
+              <label class="onoffswitch-label" for="checkLucesServ">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading2">
+            <h3>BAÑO</h3>
+          </div>
+          <div class="panel-body">
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesB">
+              <label class="onoffswitch-label" for="checkLucesB">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <footer class="container-fluid text-center">
+      <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 900, function () {
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        $(window).scroll(function () {
+          $(".slideanim").each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+              $(this).addClass("slide");
+            }
+          });
+        });
+      })
+    </script>
+
+
+    <script src="{% static 'js/actions.js' %}" ></script>
+
+</body>
+
+</html>
