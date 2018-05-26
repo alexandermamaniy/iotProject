@@ -174,8 +174,11 @@ h4 {
 
 .panel {
   border: 1px solid #208080;
-  border-radius: 0 !important;
+  /*border-radius: 0 !important;*/
   transition: box-shadow 0.5s;
+  border-radius: 20px 20px 20px 20px;
+
+
 }
 
 .panel:hover {
@@ -193,22 +196,10 @@ h4 {
   background-color: #208080 !important;
   padding: 25px;
   border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  border-radius: 20px 20px 0px 0px;
 }
 
-.panel-heading2 {
-  color: #fff !important;
-  background-color: #208080 !important;
-  padding: 10px;
-  border-bottom: 1px solid transparent;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-}
+
 
 .panel-footer {
   background-color: white !important;

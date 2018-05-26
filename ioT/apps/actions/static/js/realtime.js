@@ -3,7 +3,7 @@ $(function() {
 
     // We use an inline data source in the example, usually data would
     // be fetched from a server
-    var valorSerial = 100;
+    var valorSerial = 25;
 
     var data = [],
         totalPoints = 300;
@@ -12,23 +12,18 @@ $(function() {
         data[i]=25;
     }
 
-    function ajaxGet(url, callback){
-        var req = new XMLHttpRequest();
-        req.open("GET",url,true);
-        req.addEventListener("load",function(){
-            if(req.status>=200 && req.status <400){
-                callback(req.responseText);
-            }else{
-                //console.error(req.status+"primer error "+req.statusText);
-            }
-            if(req.status==500){
-                console.error("error 500");
-            }
+    function getAjax( mesage ){
+        object = JSON.parse(mesage);
+        valorSerial = object.data;
+        console.log(valorSerial);
+    }
+
+    function updateInformation(){
+        $.ajax({
+            url:'ajaxR',
+            type : 'get',
+            success : getAjax
         });
-        req.addEventListener("error",function(){
-            //console.error("Erro de la Super Red");
-        });
-        req.send(null);
     }
 
     function getRandomData() {
@@ -40,13 +35,7 @@ $(function() {
 
         while (data.length < totalPoints) {
 
-            ajaxGet("ajaxR",function(respuesta){
-                object = JSON.parse(respuesta);
-                valorSerial = object.dato;
-                console.log(valorSerial);
-
-            });
-
+            updateInformation();
             var prev = data.length > 0 ? data[data.length - 1] : 50,
                 y = valorSerial;
 
@@ -71,7 +60,7 @@ $(function() {
 
     // Set up the control widget
 
-    var updateInterval = 1000;
+    var updateInterval = 30;
     $("#updateInterval").val(updateInterval).change(function () {
         var v = $(this).val();
         if (v && !isNaN(+v)) {

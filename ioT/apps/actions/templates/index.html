@@ -4,26 +4,14 @@
 <html lang="en">
 
 <head>
-  <title>INTERFACE Company Page</title>
+  <title>ROXANNA</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
 
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-
-
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+  <script src="{% static 'js/jquery.min.js' %}" ></script>
+  <script src="{% static 'js/bootstrap.min.js' %}" ></script>
   <link rel="stylesheet" href="{% static 'css/actions.css' %}">
   <link rel="stylesheet" href="{% static 'css/examples.css' %}">
 </head>
@@ -40,7 +28,7 @@
   </nav>
 
   <div class="jumbotron text-center">
-    <h1>ROXANNA</h1>
+    <h1>SIN NOMBRE :)</h1>
     <p>PROYECTO DOMOTICA</p>
 
   </div>
@@ -60,7 +48,7 @@
           <div class="panel-body">
 
             <br>
-            <p><del>Luces</del></p>
+            <p>Luces</p>
             <div class="onoffswitch">
               <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesFront">
               <label class="onoffswitch-label" for="checkLucesFront">
@@ -78,17 +66,6 @@
                   <span class="onoffswitch-switch"></span>
               </label>
             </div>
-
-            <!--
-            <p>Puerta Trasera</p>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaT">
-              <label class="onoffswitch-label" for="checkPuertaT">
-                  <span class="onoffswitch-inner"></span>
-                  <span class="onoffswitch-switch"></span>
-              </label>
-            </div>-
-            -->
 
           </div>
         </div>
@@ -111,16 +88,6 @@
                 <span class="onoffswitch-switch"></span>
               </label>
             </div>
-
-
-         <!--   <p>Ventilador</p>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentS">
-              <label class="onoffswitch-label" for="checkVentS">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-            </div>  -->
 
 
             <p>Ventana</p>
@@ -261,8 +228,8 @@
 
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
-          <div class="panel-heading2">
-            <h3>CUARTO DE SERVICIO</h3>
+          <div class="panel-heading">
+            <h1>CUARTO DE SERVICIO</h1>
           </div>
           <div class="panel-body">
             <br>
@@ -270,10 +237,9 @@
             <div class="onoffswitch">
               <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesServ">
               <label class="onoffswitch-label" for="checkLucesServ">
-        <span class="onoffswitch-inner"></span>
-        <span class="onoffswitch-switch"></span>
-    </label>
-
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
             </div>
           </div>
 
@@ -281,12 +247,12 @@
       </div>
 
 
-      <div class="col-sm-4 col-xs-12">
+      <div class="col-sm-4 col-xs-12" >
         <div class="panel panel-default text-center">
-          <div class="panel-heading2">
-            <h3>BAÑO</h3>
+          <div class="panel-heading" >
+            <h1>BAÑO</h1>
           </div>
-          <div class="panel-body">
+          <div class="panel-body" >
             <br>
             <p>Luces</p>
             <div class="onoffswitch">
@@ -304,15 +270,10 @@
 
 
     <div id="content">
-
         <div class="demo-container">
             <div id="placeholder" class="demo-placeholder"></div>
         </div>
-
-        <p>You can update a chart periodically to get a real-time effect by using a timer to insert the new data in the plot and redraw it.</p>
-
         <p>Time between updates: <input id="updateInterval" type="text" value="" style="text-align: right; width:5em"> milliseconds</p>
-
     </div>
 
 
@@ -361,14 +322,9 @@
         });
       })
     </script>
-
-
-    <script src="{% static 'js/actions.js' %}" ></script>
-
-    <script src="{% static 'js/jquery.js' %}" ></script>
     <script src="{% static 'js/jquery.flot.js' %}" ></script>
     <script src="{% static 'js/realtime.js' %}" ></script>
-
+    <script src="{% static 'js/actions.js' %}" ></script>
 </body>
 
 </html>

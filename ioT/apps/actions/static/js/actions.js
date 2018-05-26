@@ -4,6 +4,7 @@
 $("#checkLucesR1").click(function () {
 var estado = $(this).is(':checked');
 
+
 });
 
 $("#checkLucesR2").click(function () {

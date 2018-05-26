@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import serial
+import serial, random, time, threading
 
 class Connect():
 
@@ -37,12 +37,36 @@ class Connect():
 
 class Information():
 
+    information = None
+
     def __init__(self):
-        self.__data = None
+
         self.__serial = Connect.getInstance("/dev/ttyACM0")
+        self.data = None
+        self.data1 = None
+        self.data2 = None
 
-    def __getData(self):
-        return self.__serial.getData()
+        self.theadP = threading.Thread(target=self.theadingInf)
+        self.theadP.setDaemon(True)
+        self.theadP.start()
 
-    data = property(fget=__getData)
+    def theadingInf(self):
+
+        while True:
+            datosAr = self.__serial.getData().split('_')
+
+            self.data = datosAr[0]
+            self.data1 = datosAr[1]
+            self.data2 = datosAr[2]
+
+            time.sleep(0.06)
+
+    @staticmethod
+
+    def getInstance():
+
+        if Information.information == None:
+            Information.information = Information()
+
+        return Information.information
 
