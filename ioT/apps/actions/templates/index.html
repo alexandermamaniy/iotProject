@@ -21,16 +21,16 @@
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-
         <a class="navbar-brand" href="#myPage">BIENVENIDO!</a>
       </div>      
     </div>
   </nav>
 
-  <div class="jumbotron text-center">
+
+
+  <div class="jumbotron text-center ">
     <h1>SIN NOMBRE :)</h1>
     <p>PROYECTO DOMOTICA</p>
-
   </div>
 
   <!-- Container (Control Section) -->
@@ -40,23 +40,31 @@
     </div>
 
     <div class="row slideanim">
+      <!-- Primer panel -->
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
           <div class="panel-heading">
             <h1>GENERAL</h1>
           </div>
           <div class="panel-body">
-
             <br>
-            <p>Luces</p>
+            <p>Luces interior</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesFront">
-              <label class="onoffswitch-label" for="checkLucesFront">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesInterior">
+              <label class="onoffswitch-label" for="checkLucesInterior">
                   <span class="onoffswitch-inner"></span>
                   <span class="onoffswitch-switch"></span>
               </label>
             </div>
 
+            <p>Activar alarma</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkAlarma">
+              <label class="onoffswitch-label" for="checkAlarma">
+                  <span class="onoffswitch-inner"></span>
+                  <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
 
             <p>Puerta Principal</p>
             <div class="onoffswitch">
@@ -71,7 +79,7 @@
         </div>
       </div>
 
-
+      <!-- segundo Panel -->
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
           <div class="panel-heading">
@@ -90,10 +98,10 @@
             </div>
 
 
-            <p>Ventana</p>
+            <p>Puerta </p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinS">
-              <label class="onoffswitch-label" for="checkWinS">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaS">
+              <label class="onoffswitch-label" for="checkPuertaS">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
               </label>
@@ -104,9 +112,40 @@
         </div>
       </div>
 
-
+      <!-- Tercer Panel -->
 
       <div class="col-sm-4 col-xs-12">
+        <div class="panel panel-default text-center">
+          <div class="panel-heading">
+            <h1>COCINA</h1>
+          </div>
+          <div class="panel-body">
+            <br>
+            <p>Luces</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesCS">
+              <label class="onoffswitch-label" for="checkLucesCS">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+            <p>Puerta</p>
+            <div class="onoffswitch">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaCS">
+              <label class="onoffswitch-label" for="checkPuertaCS">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2da fila  -->
+    <div class="row slideanim">
+      <div class="col-sm-4 col-xs-12">
+
         <div class="panel panel-default text-center">
           <div class="panel-heading">
             <h1>RECAMARA 1</h1>
@@ -124,36 +163,19 @@
             </div>
 
 
-            <p>Ventilador</p>
+            <p>puerta</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentR1">
-              <label class="onoffswitch-label" for="checkVentR1">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-
-
-            <p>Ventana</p>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinR1">
-              <label class="onoffswitch-label" for="checkWinR1">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaR1">
+              <label class="onoffswitch-label" for="checkPuertaR1">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
               </label>
             </div>
           </div>
-
-
         </div>
+
       </div>
-
-
-    </div>
-
-    <div class="row slideanim">
-
-
+      <!-- Cuarto Panel -->
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
           <div class="panel-heading">
@@ -171,82 +193,60 @@
             </div>
 
 
-            <p>Ventilador</p>
+            <p>Puerta</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentR2">
-              <label class="onoffswitch-label" for="checkVentR2">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaR2">
+              <label class="onoffswitch-label" for="checkPuertaR2">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
               </label>
             </div>
 
 
-            <p>Ventana</p>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkWinR2">
-              <label class="onoffswitch-label" for="checkWinR2">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
           </div>
         </div>
-
       </div>
+
+      <!-- quinto Panel -->
 
 
       <div class="col-sm-4 col-xs-12">
         <div class="panel panel-default text-center">
           <div class="panel-heading">
-            <h1>COCINA</h1>
+            <h1>RECAMARA 3</h1>
           </div>
           <div class="panel-body">
             <br>
             <p>Luces</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesCS">
-              <label class="onoffswitch-label" for="checkLucesCS">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesR3">
+              <label class="onoffswitch-label" for="checkLucesR3">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
               </label>
             </div>
-            <p>Ventilador</p>
+
+
+            <p>Puerta</p>
             <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkVentC">
-              <label class="onoffswitch-label" for="checkVentC">
+              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkPuertaR3">
+              <label class="onoffswitch-label" for="checkPuertaR3">
                 <span class="onoffswitch-inner"></span>
                 <span class="onoffswitch-switch"></span>
               </label>
             </div>
           </div>
-
-
         </div>
       </div>
 
+      <!-- Sexto Panel -->
 
 
-      <div class="col-sm-4 col-xs-12">
-        <div class="panel panel-default text-center">
-          <div class="panel-heading">
-            <h1>CUARTO DE SERVICIO</h1>
-          </div>
-          <div class="panel-body">
-            <br>
-            <p>Luces</p>
-            <div class="onoffswitch">
-              <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="checkLucesServ">
-              <label class="onoffswitch-label" for="checkLucesServ">
-                <span class="onoffswitch-inner"></span>
-                <span class="onoffswitch-switch"></span>
-              </label>
-            </div>
-          </div>
-
-        </div>
-      </div>
 
 
+
+
+      <!-- Septimo Panel -->
       <div class="col-sm-4 col-xs-12" >
         <div class="panel panel-default text-center">
           <div class="panel-heading" >
@@ -266,7 +266,7 @@
         </div>
       </div>
     </div>
-  </div>
+
 
 
     <div id="content">

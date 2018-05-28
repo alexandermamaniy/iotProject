@@ -5,17 +5,16 @@ $(function() {
     // be fetched from a server
     var valorSerial = 25;
 
-    var data = [],
-        totalPoints = 300;
+    var data = [], totalPoints = 50;
 
-    for(var i = 0; i<300; i++){
+    for(var i = 0; i<50; i++){
         data[i]=25;
     }
 
     function getAjax( mesage ){
         object = JSON.parse(mesage);
         valorSerial = object.data;
-        console.log(valorSerial);
+
     }
 
     function updateInformation(){
@@ -60,7 +59,7 @@ $(function() {
 
     // Set up the control widget
 
-    var updateInterval = 30;
+    var updateInterval = 900;
     $("#updateInterval").val(updateInterval).change(function () {
         var v = $(this).val();
         if (v && !isNaN(+v)) {

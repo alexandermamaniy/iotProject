@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import serial, random, time, threading
+import serial, time, threading
 
 class Connect():
 
@@ -17,13 +17,21 @@ class Connect():
         except serial.SerialException as e:
             print("error read data", e.strerror)
 
+    def sendData(self, message):
 
-    def setData(self, mesage):
         try:
-            data = bytes(mesage,"utf-8")
-            self.__connect.write(data)
+            print message
+
+            self.__connect.write(str(message))
+
         except serial.SerialException as e:
             print("error write data ",e.strerror)
+
+    def setData(self, message):
+        hilo = threading.Thread( target=self.sendData, args=(message, ) )
+        hilo.start()
+        print "termino"
+
 
 
     @staticmethod

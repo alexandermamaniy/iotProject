@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a1f793-440d-4522-80ad-7b1f0d66319f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ioT/apps/actions/static/css/fonts.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ioT/apps/actions/static/js/jquery.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ioT/apps/actions/class/__init__.py" afterPath="$PROJECT_DIR$/ioT/apps/actions/classApp/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/ioT/apps/actions/class/my_class.py" afterPath="$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/static/css/actions.css" afterPath="$PROJECT_DIR$/ioT/apps/actions/static/css/actions.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py" afterPath="$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js" afterPath="$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js" afterPath="$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/templates/index.html" afterPath="$PROJECT_DIR$/ioT/apps/actions/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/urls.py" afterPath="$PROJECT_DIR$/ioT/apps/actions/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ioT/apps/actions/views.py" afterPath="$PROJECT_DIR$/ioT/apps/actions/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/Arduino/Arduino.ino" afterPath="$PROJECT_DIR$/resources/Arduino/Arduino.ino" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,14 +30,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ioT/apps/actions/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+            <state relative-caret-position="2213">
+              <caret line="176" column="12" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#p#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,21 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="realtime.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="realtime.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
+            <state relative-caret-position="168">
+              <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -97,8 +95,8 @@
       <file leaf-file-name="my_class.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -107,11 +105,21 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ioT/apps/actions/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+            <state relative-caret-position="411">
+              <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ioT/apps/actions/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,29 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>panel-body</find>
-      <find>venti</find>
-      <find>panel-defaul</find>
-      <find>onoffswitch</find>
-      <find>Montserrat</find>
-      <find>Lato</find>
-      <find>cuarto</find>
-      <find>panel-heading2</find>
-      <find>genera</find>
-      <find>del</find>
-      <find>panel-heading</find>
-      <find>|</find>
-      <find>onoffswitch-checkbox</find>
-      <find>classA</find>
-      <find>puerta</find>
-      <find>#208080</find>
-      <find>h1</find>
-      <find>#ffffff</find>
-      <find>h4</find>
-      <find>h2</find>
-      <find>h</find>
-      <find>h3</find>
-      <find>panel-footer</find>
       <find>navbar</find>
       <find>panel</find>
       <find>hover</find>
@@ -158,6 +143,29 @@
       <find>slideanim</find>
       <find>onoffswitch-inner</find>
       <find>onoffswitch-switch</find>
+      <find>conn</find>
+      <find>consol</find>
+      <find>cuar</find>
+      <find>ba</find>
+      <find>checkPuertaP</find>
+      <find>checkWinS</find>
+      <find>checkLucesS</find>
+      <find>checkLucesR1</find>
+      <find>checkWinR1</find>
+      <find>checkVentR1</find>
+      <find>checkVentR2</find>
+      <find>checkLucesSer</find>
+      <find>checkLucesR3</find>
+      <find>checkPuertaR3</find>
+      <find>checkLucesCS</find>
+      <find>checkVentC</find>
+      <find>checkLucesB</find>
+      <find>checkLuces</find>
+      <find>data</find>
+      <find>//</find>
+      <find>RECA</find>
+      <find>H</find>
+      <find>F</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -175,17 +183,17 @@
         <option value="$PROJECT_DIR$/ioT/ioT/urls.py" />
         <option value="$PROJECT_DIR$/ioT/ioT/settings/base.py" />
         <option value="$PROJECT_DIR$/ioT/ioT/settings/local.py" />
-        <option value="$PROJECT_DIR$/ioT/apps/actions/urls.py" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/functions/func.py" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/class/Conextion.py" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/class/my_class.py" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/static/css/fonts.css" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/static/css/actions.css" />
-        <option value="$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js" />
-        <option value="$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py" />
+        <option value="$PROJECT_DIR$/ioT/apps/actions/urls.py" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/views.py" />
+        <option value="$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js" />
         <option value="$PROJECT_DIR$/ioT/apps/actions/templates/index.html" />
+        <option value="$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js" />
       </list>
     </option>
   </component>
@@ -212,6 +220,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -245,11 +254,35 @@
               <item name="actions" type="462c0819:PsiDirectoryNode" />
               <item name="classApp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="projectSCESI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectSCESI" type="462c0819:PsiDirectoryNode" />
+              <item name="ioT" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectSCESI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectSCESI" type="462c0819:PsiDirectoryNode" />
+              <item name="ioT" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projectSCESI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projectSCESI" type="462c0819:PsiDirectoryNode" />
+              <item name="ioT" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -290,16 +323,16 @@
     <frame x="1" y="37" width="1366" height="712" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16540785" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -330,7 +363,7 @@
         <state relative-caret-position="5406">
           <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -426,7 +459,7 @@
         <state relative-caret-position="5406">
           <caret line="318" column="0" lean-forward="true" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -507,7 +540,7 @@
         <state relative-caret-position="119">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,13 +581,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -601,22 +627,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="57" lean-forward="false" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="38" lean-forward="false" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/jquery.flot.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -625,18 +635,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js">
+    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/classApp/my_class.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="62" column="26" lean-forward="false" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ioT/apps/actions/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="45" lean-forward="false" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state relative-caret-position="411">
+          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
@@ -645,11 +663,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ioT/apps/actions/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="20" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        <state relative-caret-position="2213">
+          <caret line="176" column="12" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#p#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="1" lean-forward="false" selection-start-line="1" selection-start-column="1" selection-end-line="1" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ioT/apps/actions/static/js/realtime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="61" column="26" lean-forward="false" selection-start-line="61" selection-start-column="26" selection-end-line="61" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

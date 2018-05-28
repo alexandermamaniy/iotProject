@@ -1,103 +1,136 @@
 
+function sendData( message ){
+    $.ajax({
+        url:'ajaxData',
+        type : 'get',
+        data: { 'message':message },
+        success : led
+    });
+}
 
-////////LUCES//////////
-$("#checkLucesR1").click(function () {
-var estado = $(this).is(':checked');
-
-
-});
-
-$("#checkLucesR2").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkLucesB").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkLucesServ").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkLucesFront").click(function () {
-var estado = $(this).is(':checked');
-console.log(estado);
-
-});
+function led(data){
+    console.log(data);
+}
 
 
-$("#checkLucesCS").click(function () {
-var estado = $(this).is(':checked');
+////////GENERAL//////////
 
-});
+$("#checkLucesInterior").click(function () {
+    var estado = $(this).is(':checked');
+    var arrayLuces = [
+                        document.getElementById("checkLucesS"),
+                        document.getElementById("checkLucesR1"),
+                        document.getElementById("checkLucesR2"),
+                        document.getElementById("checkLucesR3"),
+                        document.getElementById("checkLucesCS"),
+                        document.getElementById("checkLucesB")
+                    ]
 
+    if(estado){
 
-$("#checkLucesS").click(function () {
-var estado = $(this).is(':checked');
-
-});
-//////////////
-
-////VENTILADORES////
-$("#checkVentR1").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkVentR2").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkVentC").click(function () {
-var estado = $(this).is(':checked');
-
+        for(var i=0; i< arrayLuces.length ; i++ ){
+            arrayLuces[i].checked = true;
+        }
+        sendData("I");
+    }else{
+        for(var i=0; i< arrayLuces.length ; i++ ){
+            arrayLuces[i].checked = false;
+        }
+        sendData("J");
+    }
 });
 
 
-
-$("#checkVentS").click(function () {
-var estado = $(this).is(':checked');
-
+$("#checkAlarma").click(function () {
+    var estado = $(this).is(':checked');
+    if(estado){
+        sendData("K");
+    }else{
+        sendData("L");
+    }
 });
-///////////////
-
-/////VENTANAS/////
-
-$("#checkWinR1").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-$("#checkWinR2").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-
-
-
-$("#checkWinS").click(function () {
-var estado = $(this).is(':checked');
-
-});
-
-////////////
-
-//////////Puertas////
 
 $("#checkPuertaP").click(function () {
 var estado = $(this).is(':checked');
-
+    console.log("Porton principal Calle");
 });
 
 
-$("#checkPuertaT").click(function () {
+////////// SALA ////////////
+
+$("#checkLucesS").click(function () {
+var estado = $(this).is(':checked');
+    sendData("G");
+});
+
+
+
+$("#checkPuertaS").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de la sala");
+});
+
+
+///////// RECAMARA 1 ////////
+
+$("#checkLucesR1").click(function () {
 var estado = $(this).is(':checked');
 
+    sendData("A");
 });
 
-//////////////
+$("#checkPuertaR1").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de Recamara 1");
+});
+
+
+////////// RECAMARA 2 //////////
+
+$("#checkLucesR2").click(function () {
+var estado = $(this).is(':checked');
+    sendData("B");
+});
+
+$("#checkPuertaR2").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de Recamara 2");
+});
+
+
+////////// RECAMARA 3 //////////
+
+
+$("#checkLucesR3").click(function () {
+var estado = $(this).is(':checked');
+    sendData("C");
+});
+
+$("#checkPuertaR3").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de Recamara 3");
+});
+
+
+
+///////// COCINA /////////////
+
+$("#checkLucesCS").click(function () {
+var estado = $(this).is(':checked');
+    sendData("E");
+});
+
+$("#checkPuertaCS").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de Cocina");
+});
+
+
+/////////  BANIO  /////////////
+
+
+$("#checkLucesB").click(function () {
+var estado = $(this).is(':checked');
+    sendData("D");
+});
+
