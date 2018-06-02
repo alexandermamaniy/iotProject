@@ -66,6 +66,7 @@ class Information():
             self.data = datosAr[0]
             self.data1 = datosAr[1]
             self.data2 = datosAr[2]
+            self.data3 = datosAr[3]
 
             time.sleep(0.06)
 

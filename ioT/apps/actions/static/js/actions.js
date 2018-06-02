@@ -15,6 +15,7 @@ function led(data){
 
 ////////GENERAL//////////
 
+
 $("#checkLucesInterior").click(function () {
     var estado = $(this).is(':checked');
     var arrayLuces = [
@@ -53,6 +54,7 @@ $("#checkAlarma").click(function () {
 $("#checkPuertaP").click(function () {
 var estado = $(this).is(':checked');
     console.log("Porton principal Calle");
+    sendData("O");
 });
 
 
@@ -65,9 +67,16 @@ var estado = $(this).is(':checked');
 
 
 
-$("#checkPuertaS").click(function () {
+$("#checkPuertaS1").click(function () {
 var estado = $(this).is(':checked');
-    console.log("puerta de la sala");
+    console.log("puerta de la sala 1");
+    sendData("M");
+});
+
+$("#checkPuertaS2").click(function () {
+var estado = $(this).is(':checked');
+    console.log("puerta de la sala 2");
+    sendData("N");
 });
 
 

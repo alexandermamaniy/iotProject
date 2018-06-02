@@ -4,6 +4,8 @@ $(function() {
     // We use an inline data source in the example, usually data would
     // be fetched from a server
     var valorSerial = 25;
+    var robo = "F";
+    var gas = "F";
 
     var data = [], totalPoints = 50;
 
@@ -14,7 +16,35 @@ $(function() {
     function getAjax( mesage ){
         object = JSON.parse(mesage);
         valorSerial = object.data;
+        robo = object.data2;
+        gas = object.data3
+        console.log(robo , gas);
+        messageAlert();
 
+
+    }
+
+    function messageAlert(){
+
+        var mesR = robo=="T" ? "Alerta de robo!!" : "";
+        var mesG = gas=="T" ? "Alerta de gas!!" : "";
+        document.getElementById("robo").textContent = mesR
+        document.getElementById("gas").textContent = mesG
+
+        /*
+        if(robo == "T"){
+
+            document.getElementById("robo").textContent = "Alerta de robo!!"
+        }else{
+            document.getElementById("robo").textContent = ""
+        }
+
+        if(gas == "T"){
+            document.getElementById("gas").textContent = "Alerta de Gas!!"
+        }else{
+            document.getElementById("gas").textContent = ""
+        }
+        */
     }
 
     function updateInformation(){
@@ -37,6 +67,7 @@ $(function() {
             updateInformation();
             var prev = data.length > 0 ? data[data.length - 1] : 50,
                 y = valorSerial;
+
 
             if (y < 0) {
                 y = 0;

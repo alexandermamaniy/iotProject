@@ -15,7 +15,8 @@ def ajaxR(request):
     if request.is_ajax():
 
         data = Information.getInstance()
-        response = JsonResponse({'data':data.data})
+        response = JsonResponse({'data':data.data,'data2':data.data2,'data3':data.data3 })
+        
         return HttpResponse(response.content)
     else:
 

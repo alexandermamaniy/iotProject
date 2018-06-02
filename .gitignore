@@ -1,11 +1,11 @@
-Compiled class file
+#Compiled class file
 *.pyc
 
 # Log file
 *.log
 
 # Pycharm files
-.idea
+*.idea
 
 # git files
 *.git
