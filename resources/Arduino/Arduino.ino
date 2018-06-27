@@ -31,10 +31,13 @@ int ventilador = 36;
 int LDR = A15;
 
 int lecLDR;
+int lecCO2;
 
 /////////////////PIR
 
-int PIR = 7 ;
+int PIR1 = 3 ;
+int PIR2 = 4 ;
+
 
 /////////////////variable que envia los datos
 
@@ -51,8 +54,12 @@ int salaLed = 37 , dorm3Led = 39;
 ///////////////////pin buzzer
 
 int alarmaLed = 41;
+int alarmaPatio = 38;
+int buzeer2    = 12 ;
+int buzeer    = 13 ;
 
-int buzeer    = 8 ;
+String roboC ;
+String gasC ;
 
 ///////////////////pines del patio
 
@@ -63,8 +70,8 @@ int patioPLed   = 43;
 ///////////////////Puertas 
 
 Servo puerta1;  
-
 Servo puerta2;
+Servo puerta3;
 
 int pos1 = 0, pos2 = 0;
 
@@ -76,7 +83,8 @@ int MQ135 = A14;
 
 int lecMQ135;
 
-int AIRE = 38, CO2 = 40, GAS = 42;
+
+int CO2 = A0, GAS = 42;
 
 
 
@@ -87,6 +95,20 @@ struct Led
     boolean status; // estado del Led
 };
 
+struct Puerta
+{
+    char key;     // key asociado al Led
+    Servo puerta;        // numero de pin asociado al Led
+    boolean status; // estado del Led
+};
+
+Puerta puertas[] = {
+                'M', puerta1, false,
+                'N', puerta2, false,
+                'O', puerta3, false,
+            };
+
+
 
 Led luces[] = {
             'A', dorm1Led, false,
@@ -94,11 +116,13 @@ Led luces[] = {
             'C', dorm3Led, false,
             'D', banioLed, false,
             'E', cocinaLed, false,            
-            'G', salaLed, false,
-            
+            'G', salaLed, false,            
         };
 
+
+
 int tamLuces = sizeof(luces)/sizeof(Led); // tamanio array de luces
+int tamPuertas = sizeof(puertas)/sizeof(Puerta); // tamanio array de luces
 
 boolean alarma = false;  // estado si la alarma esta encendida o no 
 
@@ -111,7 +135,8 @@ void setup() {
     
     
     pinMode(LDR,         INPUT);
-    pinMode(PIR,         INPUT);
+    pinMode(PIR1,         INPUT);
+    pinMode(PIR2,         INPUT);
     pinMode(MQ135,         INPUT);
     //  leds
     pinMode(dorm1Led,    OUTPUT);
@@ -123,30 +148,41 @@ void setup() {
     pinMode(salaLed,     OUTPUT);
     pinMode(patioPLed,   OUTPUT);
     pinMode(alarmaLed,   OUTPUT);
+    pinMode(alarmaPatio,   OUTPUT);
 
     pinMode(buzeer,      OUTPUT);
+    pinMode(buzeer2,      OUTPUT);
     pinMode(ventilador,  OUTPUT);
-    pinMode(AIRE,        OUTPUT);
-    pinMode(CO2,         OUTPUT);
+
+    pinMode(CO2,         INPUT);
     pinMode(GAS,         OUTPUT);
 
-    puerta1.attach(28);    
-    puerta2.attach(30);    
+    puerta1.attach(34);    
+    puerta2.attach(32);    
+    puerta3.attach(45);    
+    
+    for(int i=0; i< tamPuertas ; i++){
+
+        puertas[i].puerta.write(20);
+    }
 
 }
 
 void loop() {
-    
+
     lecLDR = analogRead(LDR);
+
+    lecCO2 = analogRead(CO2);
+    //Serial.println(lecCO2);    
     lecMQ135= analogRead(MQ135);
     hum = dht11.readHumidity();
     temp = dht11.readTemperature();
     
     if ( Serial.available() >  0 ){
-        char dato = Serial.read();
-        if( dato == 'A' || dato == 'B' || dato == 'C' || dato == 'D' || dato == 'E'  || dato == 'G' ){
-            prenderLed(dato);
-        }else if(dato == 'I'){ //prendemos todo el interior de la casa
+        char dato = Serial.read();      
+        abrirPuerta(dato);                
+        prenderLed(dato);
+        if(dato == 'I'){ //prendemos todo el interior de la casa
             generalInteriorLed(true);
         }else if(dato == 'J'){
             generalInteriorLed(false);
@@ -163,44 +199,40 @@ void loop() {
         generalPatio(false);
     }
     if(temp >= 22){
-        //prender Ventilador
         ventilar(true);
     }else{
-        //apagar Ventilador
         ventilar(false);
     }
 
-    /*
-    if( errDth11 = dht11.read(hum, temp) == 0 ){ // devuelve 0 si leyo bien el sensor
-
-        dataDth11 = (String) temp + "_" + (String) hum;
-
-    }else{
-
-        dataDth11 = "0_0";
-
-    }
-    */
 
     if (isnan(hum) || isnan(temp)) {
-
         dataDth11 = "0"+sep+"0";  
-
     }else{
-
         dataDth11 = (String)temp+sep+(String)hum;
     }
     if(alarma){
-        if (digitalRead( PIR )){
-            alarmaActivada(true);           
+        int pirr1 = digitalRead( PIR1 );
+        int pirr2 = digitalRead( PIR2 );
+        
+        if ( pirr1 || pirr2 ){
+            alarmaActivada(true);
+                   
         }
     }else{
         alarmaActivada(false);        
     }
 
+    if(lecCO2 >= 350 ){
+        gasC = "T";
+        digitalWrite(buzeer2, true);
+    }else{
 
-    data = dataDth11+sep+(String)lecLDR;
+        gasC = "F";
+        digitalWrite(buzeer2, false);
+    }
 
+    //data = dataDth11+sep+(String)lecLDR+sep+roboC+sep+gasC;
+    data = dataDth11+sep+roboC+sep+gasC;
     Serial.println(data);
 
     //BT1.println("Bluetoom"); 
@@ -222,45 +254,20 @@ void generalInteriorLed(boolean estado){
 void alarmaActivada(boolean estado){
 
     digitalWrite(alarmaLed, estado);
-    digitalWrite(buzeer,    estado);
-    
+    digitalWrite(alarmaPatio, estado);
 
+    digitalWrite(buzeer,    estado);
+    roboC = estado ? "T":"F";    
 }
 
 void ventilar(boolean estado){
-
     digitalWrite(ventilador, estado);
 
 }
 
 void generalPatio(boolean estado){
-
     digitalWrite(entradaPLed, estado);
-
     digitalWrite(patioPLed,   estado);
-
-}
-
-void puertas(int puerta, boolean estado){
-
-    if (estado == true){
-
-        if(puerta == 1){
-
-            puerta1.write(100);
-        }else{
-
-            puerta2.write(100);  
-        }
-    }else{
-
-        if(puerta == 1){
-            puerta1.write(0);
-        }else if(puerta == 2){
-
-            puerta2.write(0);  
-        }
-    }
 }
 
 void prenderLed(char key){
@@ -272,6 +279,27 @@ void prenderLed(char key){
         }
     }
 }
+
+void abrirPuerta(char key){
+    int i;
+    for(i=0; i< tamPuertas ; i++){
+        if(puertas[i].key == key){
+            puertas[i].status = puertas[i].status ? false: true;
+            if( puertas[i].status == 1 ){                
+                //Serial.println("se abrio puerta ==== "+ (String)puertas[i].key);
+                puertas[i].puerta.write(100);
+            }else{
+                //Serial.println("se cerro puerta ==== "+ (String)puertas[i].key);
+                puertas[i].puerta.write(20);
+            }            
+        }
+    }
+}
+
+
+
+
+
 
 
 //void AlarmaGas(boolean estado){}
