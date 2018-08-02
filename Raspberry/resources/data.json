@@ -1,0 +1,113 @@
+
+{
+  "pepito2" : {
+    "Extras" : [
+      {"lightYard" : {
+        "pin" : 18
+      }},
+      {"buzzer": {
+        "pin" : 20
+      }},
+        {"fan": {
+        "pin" : 19
+      }},
+      {"alertSteal" : {
+        "pin" : 15
+      }},
+      {"ldr": {
+        "pin" : 6
+      }}
+    ],
+    "Bathrooms" : [ {
+      "door" : {
+        "pin":22,
+        "min_angle" : 0,
+        "max_angle": 90
+      },
+      "light" : {
+        "pin" : 14
+      }
+    } ],
+    "Cookings" : [ {
+      "door" : {
+        "pin":2,
+        "min_angle" : 90,
+        "max_angle": -90
+      },
+      "light" : {
+        "pin" : 23
+      }
+    } ],
+    "LivingRooms" : [ {
+      "door" : {
+        "pin":11,
+        "min_angle" : 0,
+        "max_angle": 90
+      },
+      "light" : {
+        "pin" : 12
+      }
+    } ],
+    "Rooms" : [ {
+      "door" : {
+        "pin": 10,
+        "min_angle" : 0,
+        "max_angle": 90
+      },
+      "light" : {
+        "pin" : 25
+      }
+    }, {
+      "door" : {
+        "pin":9,
+        "min_angle" : 0,
+        "max_angle": 90
+      },
+      "light" : {
+        "pin" : 8
+      }
+    }, {
+      "door" : {
+        "pin":4,
+        "min_angle" : -90,
+        "max_angle": 90
+      },
+      "light" : {
+        "pin" : 7
+      }
+    } ],
+
+    "General" : {
+      "frontDoor" : {
+        "pin" : 17,
+        "min_angle" : 90,
+        "max_angle": -90
+      },
+      "garageDoor" : {
+        "pin" : 3,
+        "min_angle" : 90,
+        "max_angle": 0
+      },
+      "lightCorridor" : {
+        "pin" : 24
+      }
+    },
+
+    "Sensors" : {
+      "dht11" : {
+        "humidity" : 0,
+        "temperature" : 0,
+        "pin": 13
+      },
+      "mq135" : {
+        "gas" : false
+      },
+      "pir" : {
+        "isActive" : false,
+        "steal" : true,
+        "pin": 5
+      }
+    }
+
+  }
+}
