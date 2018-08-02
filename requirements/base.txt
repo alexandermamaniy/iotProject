@@ -1,3 +1,0 @@
-Django==1.7
-pyserial==3.4
-PyBluez==0.22
