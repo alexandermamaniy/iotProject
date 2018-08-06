@@ -1,16 +1,23 @@
 \babel@toc {spanish}{}
 \contentsline {section}{\'{I}ndice}{2}{section*.1}
-\contentsline {section}{\numberline {1}INTRODUCCI\IeC {\'O}N}{3}{section.1}
-\contentsline {section}{\numberline {2}ANTECENTES}{3}{section.2}
-\contentsline {section}{\numberline {3}JUSTIFICACION}{3}{section.3}
-\contentsline {section}{\numberline {4}PLANTEAMIENTO DEL PROBLEMA}{3}{section.4}
-\contentsline {section}{\numberline {5}OBJETIVOS}{3}{section.5}
-\contentsline {section}{\numberline {6}HIPOTESIS}{3}{section.6}
-\contentsline {section}{\numberline {7}NOVEDAD Y APORTE CIENTIFICO}{3}{section.7}
-\contentsline {section}{\numberline {8}METODOL\IeC {\'O}GIA Y FUENTES}{3}{section.8}
-\contentsline {section}{\numberline {9}DESARROLLO DEL PROYECTO}{3}{section.9}
-\contentsline {section}{\numberline {10}CONCLUSIONES Y RECOMENDACIONES}{3}{section.10}
-\contentsline {section}{\numberline {11}GLOSARIO DE T\IeC {\'E}RMINOS}{5}{section.11}
-\contentsline {subsection}{\numberline {11.1}Diccionario}{5}{subsection.11.1}
-\contentsline {section}{\numberline {12}BLIBLIOGRAFIA}{6}{section.12}
-\contentsline {section}{Referencias}{6}{section*.2}
+\contentsline {section}{\numberline {1}Introduccion}{3}{section.1}
+\contentsline {section}{\numberline {2}Planteamiento del problema}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Antecedentes}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Justificacion}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Situacion sin Proyecto}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}Situacion con Proyecto}{4}{subsubsection.2.2.2}
+\contentsline {section}{\numberline {3}OBJETIVOS}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Objetivo General}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Objetivos Especificos}{5}{subsection.3.2}
+\contentsline {subsubsection}{\numberline {3.2.1}Electronica del proyecto}{5}{subsubsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.2}Informatica del proyecto}{5}{subsubsection.3.2.2}
+\contentsline {section}{\numberline {4}HIPOTESIS}{6}{section.4}
+\contentsline {section}{\numberline {5}NOVEDAD Y APORTE CIENTIFICO}{6}{section.5}
+\contentsline {section}{\numberline {6}DESARROLLO DEL PROYECTO}{6}{section.6}
+\contentsline {subsection}{\numberline {6.1}Sistema Web}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Firmware}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Componetes Electronicos}{9}{subsection.6.3}
+\contentsline {section}{\numberline {7}Metodologias y fuentes}{12}{section.7}
+\contentsline {section}{\numberline {8}Conclusiones y Recomendaciones}{12}{section.8}
+\contentsline {section}{\numberline {9}BLIBLIOGRAFIA}{13}{section.9}
+\contentsline {section}{Referencias}{13}{section*.2}
