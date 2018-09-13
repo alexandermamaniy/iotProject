@@ -11,11 +11,9 @@ var refSensorDht11 = 'users/pepito2/Sensors/dht11/'
 var refSensorMQ135 = 'users/pepito2/Sensors/mq135/'
 var refSensorPir = 'users/pepito2/Sensors/pir/'
 
-
 const auth = firebase.auth();
 const promise = auth.signInWithEmailAndPassword('userPru2@gmail.com', 'pepito1234');
 promise.catch(e => console.log(e.message));
-
 
 var dbGeneral = firebase.database().ref(refGeneral);
 
@@ -23,22 +21,15 @@ var dbLivingRooms0 = firebase.database().ref(refLivingRooms+'0');
 
 var dbCookings0 = firebase.database().ref(refCookings+'0');
 
-var dbRooms0 = firebase.database().ref(refRooms+'0');
-var dbRooms1 = firebase.database().ref(refRooms+'1');
-var dbRooms2 = firebase.database().ref(refRooms+'2');
+var dbRooms0 = firebase.database().ref(refRooms+'0')X
+var dbRooms1 = firebase.database().ref(refRooms+'1')
+var dbRooms2 = firebase.database().ref(refRooms+'2')
 
-var dbBathrooms0 = firebase.database().ref(refBathrooms+'0');
+var dbBathrooms0 = firebase.database().ref(refBathrooms+'0')
 
-var dbSensorDht11 = firebase.database().ref(refSensorDht11);
-var dbSensorMQ135 = firebase.database().ref(refSensorMQ135);
-var dbSensorPir = firebase.database().ref(refSensorPir);
-
-
-
-
-
-
-
+var dbSensorDht11 = firebase.database().ref(refSensorDht11)
+var dbSensorMQ135 = firebase.database().ref(refSensorMQ135)
+var dbSensorPir = firebase.database().ref(refSensorPir)
 
 // General
 dbGeneral.on('value', function (data) {

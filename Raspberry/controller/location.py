@@ -80,6 +80,7 @@ class Door(object):
         self.angularServo.angle = self.maxAngle
 
     def closeDoor(self):
+        
         self.angularServo.angle = self.minAngle
 
 
