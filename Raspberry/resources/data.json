@@ -22,58 +22,70 @@
       "door" : {
         "pin":22,
         "min_angle" : 0,
-        "max_angle": 90
+        "max_angle": 90,
+        "value" : 0
       },
       "light" : {
-        "pin" : 14
+        "pin" : 14,
+        "value" : false
       }
     } ],
     "Cookings" : [ {
       "door" : {
         "pin":2,
         "min_angle" : 90,
-        "max_angle": -90
+        "max_angle": -90,
+        "value" : 90
       },
       "light" : {
-        "pin" : 23
+        "pin" : 23,
+        "value" : false
       }
     } ],
     "LivingRooms" : [ {
       "door" : {
         "pin":11,
         "min_angle" : 0,
-        "max_angle": 90
+        "max_angle": 90,
+        "value" : 0
       },
       "light" : {
-        "pin" : 12
+        "pin" : 12,
+        "value" : false
       }
     } ],
     "Rooms" : [ {
       "door" : {
         "pin": 10,
         "min_angle" : 0,
-        "max_angle": 90
+        "max_angle": 90,
+        "value" : 0
       },
       "light" : {
-        "pin" : 25
+        "pin" : 25,
+        "value" : false
       }
     }, {
       "door" : {
         "pin":9,
         "min_angle" : 0,
-        "max_angle": 90
+        "max_angle": 90,
+        "value" : 0
       },
       "light" : {
-        "pin" : 8
+        "pin" : 8,
+        "value" : false
       }
     }, {
       "door" : {
         "pin":4,
         "min_angle" : -90,
-        "max_angle": 90
+        "max_angle": 90,
+        "value" : -90
       },
       "light" : {
-        "pin" : 7
+        "pin" : 7,
+        "value" : false
       }
     } ],
 
@@ -81,15 +93,18 @@
       "frontDoor" : {
         "pin" : 17,
         "min_angle" : 90,
-        "max_angle": -90
+        "max_angle": -90,
+        "value" : 90
       },
       "garageDoor" : {
         "pin" : 3,
         "min_angle" : 90,
-        "max_angle": 0
+        "max_angle": 0,
+        "value" : 90
       },
       "lightCorridor" : {
-        "pin" : 24
+        "pin" : 24,
+        "value" : false
       }
     },
 

@@ -2,11 +2,12 @@
 # coding: utf-8
 
 from gpiozero import LED, AngularServo
-from firebase import ConecctionFirebase
+from connectionMQTT import ConnectionMQTT
 from time import sleep
 from threading import Thread
+from data import setData, getData
 
-connection = ConecctionFirebase.getInstance()
+connection = ConnectionMQTT.getInstance()
 
 
 class Led(object):
@@ -27,43 +28,39 @@ class Led(object):
 
 class LedConnection( Led ):
 
-    def __init__(self, numberPin, path):
-
+    def __init__(self, numberPin, topic):
         super().__init__(numberPin)
-        self.connection = connection.getDb().reference(path)
-        self.thread = Thread(target=self.threadLed)
-        self.thread.setDaemon(True)
-        self.thread.start()
+        connection.addSubscribe(topic, self.callback)
+        self.topic = topic
+        self.start()
 
     def value(self):
-        led = self.led.value
-        connection = self.connection.get()
-        path = self.connection.path
-        return ( led, connection, path )
+        return ( self.led.value, getData(self.topic), self.topic )
 
-    def getConnection(self):
-        return self.connection
-
-
-    def threadLed(self):
-        previousState = self.connection.get()
-
-        if previousState :
+    def start(self):
+        value = getData(self.topic)
+        if value:
+            print('primero lo encendio')
             self.turnOn()
         else:
+            print('primero lo apago')
             self.turnOff()
-        while True:
-            actualState = self.connection.get()
+        print('el 1er valor es:', self.led.value)
+        connection.addPublished(self.topic, value )
 
-            if actualState != previousState:
-                if actualState:
-                    self.turnOn()
-                    print(self.value())
-                else:
-                    self.turnOff()
-                    print(self.value())
-                previousState = actualState
-            sleep(0.4)
+    def callback(self, topic, value):
+
+        state = getData(topic)
+        if value != state and isinstance(value, bool):
+            if value:
+                self.turnOn()
+                setData(topic, value)
+                print('se prendio', self.value())
+            else:
+                self.turnOff()
+                setData(topic, value)
+                print('se apago', self.value())
+
 
 
 class Door(object):
@@ -86,63 +83,63 @@ class Door(object):
 
 class DoorConnection( Door ):
 
-    def __init__(self, numberPin, minAngle, maxAngle, path ):
+    def __init__(self, numberPin, minAngle, maxAngle, topic ):
         super().__init__(numberPin, minAngle, maxAngle)
-        self.connection = connection.getDb().reference(path)
-        self.thread = Thread(target=self.threadDoor)
-        self.thread.setDaemon(True)
-        self.thread.start()
+        connection.addSubscribe(topic, self.callback)
+        self.topic = topic
+        self.start()
+
+    def start(self):
+        value = getData(self.topic)
+        if value == self.minAngle:
+            print('primero se cerro la puerta')
+            self.closeDoor()
+        else:
+            print('primero se abrio la puerta')
+            self.openDoor()
+
+        print('el 1er valor es:', self.angularServo.angle)
+        connection.addPublished(self.topic, value)
+
 
     def value(self):
         angle = self.angularServo.angle
-        connection = self.connection.get()
-        path = self.connection.path
-        return ( angle, connection, path )
+        return (angle, getData(self.topic), self.topic)
 
-    def getConnection(self):
-        return self.connection
 
-    def threadDoor(self):
-        previousState = self.connection.get()
-
-        if previousState:
-            self.openDoor()
-        else:
-            self.closeDoor()
-        while True:
-            actualState = self.connection.get()
-
-            if actualState != previousState:
-                if actualState:
-                    self.openDoor()
-                    print(self.value())
-                else:
-                    self.closeDoor()
-                    print(self.value())
-                previousState = actualState
-            sleep(0.4)
+    def callback(self, topic, value):
+        state = getData(topic)
+        if value != state and isinstance(value, int):
+            if value == self.minAngle:
+                self.closeDoor()
+                setData(topic, value)
+                print('se cerro la puerta', self.value())
+            elif value == self.maxAngle:
+                self.openDoor()
+                setData(topic, value)
+                print('se abrio la puerta', self.value())
 
 
 class Ambient(object):
 
-    def addLight(self,numberPin, path ):
-        self.light = LedConnection(numberPin,path)
+    def addLight(self,numberPin, topic ):
+        self.light = LedConnection(numberPin,topic)
 
-    def addDoor(self, numberPin, minAngle , maxAngle, path ):
-        self.door = DoorConnection(numberPin,minAngle,maxAngle,path)
+    def addDoor(self, numberPin, minAngle , maxAngle, topic ):
+        self.door = DoorConnection(numberPin,minAngle,maxAngle,topic)
 
 
 class AmbientGeneral(object):
 
-    def addLightCorridor(self, numberPin, path):
-        self.lightCorridor = LedConnection(numberPin,path)
+    def addLightCorridor(self, numberPin, topic):
+        self.lightCorridor = LedConnection(numberPin,topic)
 
 
-    def addFrontDoor(self, numberPin, minAngle, maxAngle, path ):
-        self.frontDoor = DoorConnection(numberPin, minAngle, maxAngle, path)
+    def addFrontDoor(self, numberPin, minAngle, maxAngle, topic ):
+        self.frontDoor = DoorConnection(numberPin, minAngle, maxAngle, topic)
 
 
-    def addGarageDoor(self, numberPin, minAngle, maxAngle, path ):
-        self.garageDoor = DoorConnection(numberPin, minAngle, maxAngle, path)
+    def addGarageDoor(self, numberPin, minAngle, maxAngle, topic ):
+        self.garageDoor = DoorConnection(numberPin, minAngle, maxAngle, topic)
 
 

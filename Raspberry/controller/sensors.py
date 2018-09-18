@@ -1,7 +1,7 @@
 #!/usr/bin/python3.5
 # coding: utf-8
 
-from firebase import ConecctionFirebase
+from .connectionMQTT import ConnectionMQTT
 from gpiozero import MotionSensor, Buzzer, OutputDevice, LED
 from threading import Thread
 import Adafruit_DHT, glob
@@ -9,7 +9,9 @@ from time import sleep
 import serial, threading
 
 
-connection = ConecctionFirebase.getInstance()
+from .data import setData, getData
+
+connection = ConnectionMQTT.getInstance()
 
 
 
@@ -44,7 +46,8 @@ class BuzzerSensor(object):
     def buzzerOn(self):
         self.buzzer.on()
 
-
+"""
+# implementar con el conversor
 class Ldr(object):
     def __init__(self, lightYard):
         self.lightYard = lightYard
@@ -64,17 +67,22 @@ class Ldr(object):
             else:
                 self.lightYard.turnOn()
             sleep(0.2)
-
+"""
 
 class DHT11(object):
-    def __init__(self, numberPin, pathTemperature, pathHumidity, fan):
-        self.connectionHumidity = connection.getDb().reference(pathHumidity)
-        self.connectionTemperature = connection.getDb().reference(pathTemperature)
+    def __init__(self, numberPin, topicTemperature, topicHumidity, fan):
+
+        connection.addSubscribe(topicHumidity, lambda a, b : print(a,b) )
+        connection.addSubscribe(topicTemperature, lambda a, b : print(a,b) )
+
+        self.topicTem = topicTemperature
+        self.topicHum = topicHumidity
+
         self.dht11 = Adafruit_DHT.DHT11
         self.pin = numberPin
         self.fan = fan
 
-        self.threadDht11 = Thread(target=self.startDht11)
+        self.threadDht11 = Thread(target=self.start)
         self.threadDht11.setDaemon(True)
         self.threadDht11.start()
 
@@ -82,16 +90,15 @@ class DHT11(object):
     def value(self):
         humidity, temperature = Adafruit_DHT.read_retry(self.dht11, self.pin)
 
-        connectionHumidity = self.connectionHumidity.get()
-        connectionTemperature = self.connectionTemperature.get()
+        valueHumidity = getData(self.topicHum)
+        valueTemperature = getData(self.topicTem)
 
-        pathHumidity = self.connectionHumidity.path
-        pathTemperature = self.connectionTemperature.path
+        topicHumidity = self.topicHum
+        topicTemperature = self.topicTem
 
-        return ( humidity, temperature, connectionHumidity, connectionTemperature, pathHumidity, pathTemperature )
+        return ( humidity, temperature, valueHumidity, valueTemperature, topicHumidity, topicTemperature )
 
-
-    def startDht11(self):
+    def start(self):
 
         while True:
             humidity, temperature = Adafruit_DHT.read_retry(self.dht11, self.pin)
@@ -100,17 +107,15 @@ class DHT11(object):
 
             if temperature == None:
                 temperature=0
-
-
-            self.connectionHumidity.set(humidity)
-            self.connectionTemperature.set(temperature)
+            connection.addPublished(self.topicTem, temperature)
+            connection.addPublished(self.topicHum, humidity)
             if temperature > 21:
                 self.fan.fanOn()
             else:
                 self.fan.fanOff()
-            sleep(0.2)
+            sleep(0.5)
 
-
+# implementar con el conversor
 class MQ135(object):
 
     def __init__(self, path,  buzzer, alertSteal):
@@ -150,7 +155,7 @@ class MQ135(object):
             previousState = actualState
             sleep(0.2)
 
-
+# 
 class PIR(object):
 
     def __init__(self, numberPin, pathSteal, pathIsactive, buzzer, alertSteal):
