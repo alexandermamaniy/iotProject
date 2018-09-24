@@ -16,7 +16,7 @@ class ConnectionMQTT():
         self.client.on_connect = self.__on_connect
         self.client.on_publish = self.__on_publish
         self.client.on_subscribe = self.__on_subscribe
-        self.client.connect(config('hostname'), 1883, 60)
+        self.client.connect(config('serverMQTT'), 1883, 60)
         self.client.loop_start()
 
 
@@ -36,9 +36,10 @@ class ConnectionMQTT():
             print('error en la conecction')
 
     def __on_message(self, client, userdata, message):
-        # print(message.topic + " " + str(message.qos) + " " + str(message.payload))
+        print(message.topic + " " + str(message.qos) + " " + str(message.payload))
 
         value = message.payload.decode("utf-8")
+        #value = str(message.payload.decode("utf-8"))
         try:
 
             if value.lower() == 'true':
@@ -49,7 +50,8 @@ class ConnectionMQTT():
                 value = int(value)
         except ValueError:
             pass
-        print("este es el type",type(value))
+        #print("este es el type",type(value))
+
         self.callbacks[message.topic](message.topic, value)
 
 
@@ -58,7 +60,7 @@ class ConnectionMQTT():
         mid: id de subcriptcion
         '''
         # cuando publicamos
-        print("mid: " + str(mid))
+        #print("mid: " + str(mid), userdata)
 
     def __on_subscribe(self, client, userdata, mid, granted_qos):
         print("Subscribed: " + str(mid) + " " + str(granted_qos))

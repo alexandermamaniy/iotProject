@@ -11,13 +11,13 @@
 \contentsline {subsection}{\numberline {3.2}Objetivos Especificos}{5}{subsection.3.2}
 \contentsline {subsubsection}{\numberline {3.2.1}Electronica del proyecto}{5}{subsubsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.2}Informatica del proyecto}{5}{subsubsection.3.2.2}
-\contentsline {section}{\numberline {4}Hipotesis}{6}{section.4}
+\contentsline {section}{\numberline {4}Hipotesis}{5}{section.4}
 \contentsline {section}{\numberline {5}Novedad y aporte cientifico}{6}{section.5}
 \contentsline {section}{\numberline {6}Desarrolo del proyecto}{6}{section.6}
-\contentsline {subsection}{\numberline {6.1}App Movil}{7}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Firmware}{7}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.1}Sitio Web}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Firmware}{8}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Componetes Electronicos}{9}{subsection.6.3}
-\contentsline {section}{\numberline {7}Metodologias y fuentes}{12}{section.7}
-\contentsline {section}{\numberline {8}Conclusiones y Recomendaciones}{13}{section.8}
+\contentsline {section}{\numberline {7}Metodologias y fuentes}{13}{section.7}
+\contentsline {section}{\numberline {8}Conclusiones y Recomendaciones}{14}{section.8}
 \contentsline {section}{\numberline {9}Bibliografia}{14}{section.9}
 \contentsline {section}{Referencias}{14}{section*.2}

@@ -44,8 +44,6 @@ if __name__ == "__main__":
         structura = json.load(file)
     file.close()
 
-    USERS = 'users'
-
     home = Home()
     loadExtras()
     for keyUser, valueUser in structura.items():
@@ -54,23 +52,23 @@ if __name__ == "__main__":
             if keyLocation == 'Sensors':
                 for keySensor, valueSensor in valueLocation.items():
                     if keySensor == 'dht11':
-                        pathHumidity = "{}/{}/{}/{}/humidity".format(USERS,keyUser,keyLocation,keySensor)
-                        pathTemperature = "{}/{}/{}/{}/temperature".format(USERS, keyUser,keyLocation,keySensor)
+                        pathHumidity = "{}/{}/{}/humidity".format(keyUser,keyLocation,keySensor)
+                        pathTemperature = "{}/{}/{}/temperature".format(keyUser,keyLocation,keySensor)
                         pin = structura[keyUser][keyLocation][keySensor]['pin']
                         fan = home.getExtra('fan')
                         dht11 = DHT11(pin,pathTemperature,pathHumidity,fan)
                         home.addSensors(keySensor, dht11)
 
                     elif keySensor == 'mq135':
-                        pathGas = "{}/{}/{}/{}/gas".format(USERS,keyUser,keyLocation,keySensor)
+                        pathGas = "{}/{}/{}/gas".format(keyUser,keyLocation,keySensor)
                         buzzer = home.getExtra('buzzer')
                         alertSteal = home.getExtra('alertSteal')
                         mq135 = MQ135(pathGas, buzzer, alertSteal)
                         home.addSensors(keySensor, mq135)
 
                     elif keySensor == 'pir':
-                        pathIsActive = "{}/{}/{}/{}/isActive".format(USERS, keyUser, keyLocation, keySensor)
-                        pathSteal = "{}/{}/{}/{}/steal".format(USERS, keyUser, keyLocation, keySensor)
+                        pathIsActive = "{}/{}/{}/isActive".format(keyUser, keyLocation, keySensor)
+                        pathSteal = "{}/{}/{}/steal".format(keyUser, keyLocation, keySensor)
                         pin = structura[keyUser][keyLocation][keySensor]['pin']
                         buzzer = home.getExtra('buzzer')
                         alertSteal = home.getExtra('alertSteal')
@@ -82,7 +80,7 @@ if __name__ == "__main__":
 
                 for keyGeneral, valueGeneral in valueLocation.items():
                     pin = structura[keyUser][keyLocation][keyGeneral]['pin']
-                    path = "{}/{}/{}/{}".format( USERS, keyUser, keyLocation, keyGeneral )
+                    path = "{}/{}/{}/value".format(keyUser, keyLocation, keyGeneral )
 
                     if keyGeneral == 'frontDoor':
                         minAngle = structura[keyUser][keyLocation][keyGeneral]['min_angle']
@@ -107,8 +105,9 @@ if __name__ == "__main__":
                 for location in valueLocation:
                     ambient = Ambient()
                     for k in location.keys():
-                        path = "{}/{}/{}/{}/{}".format(USERS,keyUser,keyLocation,i,k)
+                        path = "{}/{}/{}/{}/value".format(keyUser,keyLocation,i,k)
                         pin = structura[keyUser][keyLocation][i][k]['pin']
+                        print('estamos imprimiendo',type(path), type(pin))
                         if k == 'light':
                             ambient.addLight(pin, path)
                         elif k == 'door':

@@ -1,4 +1,3 @@
-
 \documentclass[letterpaper,12pt]{article} 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish, activeacute]{babel}
@@ -42,7 +41,7 @@
 %====================================Datos del proyecto ======================================
 
 %titulo del proyecto
-\title{Aplicacion Multiplataforma de Domotica}				
+\title{Sistema de Domotica}				
 
 %%%% AUTORES
 \newcommand{\autorUno}{
@@ -51,7 +50,7 @@
 	Cochabamba\\
 	akeymy4@gmail.com.}
 \newcommand{\autorDos}{
-	Univ. Ismael Angulo A. \\
+	Univ. Ismael D. Angulo. A.\\
 	FCyT\\
 	Cochabamba\\
 	Isma@gmail.com.}
@@ -95,7 +94,7 @@
 			Sociedad Cientifica de Estudiantes de Sistemas e Informatica\\
 			http://www.scesi.org
 		}
-		\fancyfoot[C]{\vacio}														%hacemos uso del comando que creamo \vacio
+		\fancyfoot[C]{\vacio}														%hacemos uso del comando que creamo en el centro para ocultar la enumeracion
 		\fancyfoot[R]{\footnotesize Página \thepage}								%numeracion de la pagina					
 		\
 		\vacio
@@ -108,7 +107,7 @@
 			[2cm]		
 			%importamos una imagen
 			\includegraphics[width=5.5cm]{images/maqueta.jpeg}								
-			\\[2cm]
+			\\[1.5cm]
 			
 			
 			%\textcolor{azulportada}	
@@ -117,11 +116,11 @@
 			Presentado por :
 			\vspace{1.5cm}
 			
-			\begin{minipage}[b]{5.5cm}
+			\begin{minipage}[b]{5.3cm}
 				\begin{center}
 					\autorUno
 				\end{center}
-			\end{minipage} \hfill \begin{minipage}[b]{4.5cm}
+			\end{minipage} \hfill \begin{minipage}[b]{5cm}
 				\begin{center}
 					\autorDos
 				\end{center}
@@ -131,15 +130,14 @@
 				\end{center}
 				
 			\end{minipage}\\
-			[1cm]
+			[2cm]
 			
-			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Area :   Internet of Things}}\\
+			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Colaborador :}}\\
 			[0.5cm]
-			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Materia  :   Web, Robotica}}\\
-			[3cm]
-
+			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Univ. Jorge Rolando Encinas}}\\
+			[1.6cm]
 			
-			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Cochabamba, 2018}}\\[0.5cm]
+			{\fontfamily{phv}\fontsize{12}{3}\selectfont{Cochabamba, 2018}}\\[1cm]
 		\end{center}
 		
 		
@@ -165,7 +163,7 @@
 		
 		La union de estas tecnologias mensionadas dan origen a lo que conocemos como "Domotica". Que es nada menos que la automatizacion inteligente de un vivienda, que permite una gestión eficiente del uso de la energía, seguridad y confort, además de comunicación entre el usuario y un sistema. 
 		
-		Este proyecto pretende dar a conocer el desarrollo, implementacion  y despliegue de una Aplicacion Movil multiplataforma de Domotica, usando las tecnologias ya mensionadas.
+		Este proyecto pretende dar a conocer el desarrollo, implementacion  y despliegue de un Sistema de Domotica, usando las tecnologias ya mensionadas.
 		
 		
 		\section{Planteamiento del problema}
@@ -200,9 +198,9 @@
 		
 		\subsection{Objetivo General}
 		
-		Diseñar un Aplicacion Movil Multiplataforma de Domotica que permita el control de  iluminacion y accionamiento de puertas de los distintos dormitorios.
-		Asi tambien manejar la ventilacion mediante lecturas de humedad y temperatura del ambiente. Tambien contara con un sencillo control de alarma para la detección de intrusos, con video vigilancia(Streaming)  y detection de CO2( Gas )\\\\
-		Para todos estos aspectos se pretende crear una aplicacion movil multiplataforma, amigable que permita el control y monitoreo de varias viviendas.
+		Diseñar un Sistema de Domotica que permita el control de  iluminacion y accionamiento de puertas de los distintos dormitorios.
+		Asi tambien manejar la ventilacion mediante lecturas de humedad y temperatura del ambiente. Tambien contara con un sencillo control de alarma para la detección de intrusos con GSM-sim900  y detection de CO2( Gas )\\\\
+		Para todos estos aspectos se pretende crear un Sistema multiplataforma, amigable que permita el control y monitoreo de varias viviendas.
 		
 		
 		\subsection{Objetivos Especificos}
@@ -219,8 +217,6 @@
 			
 			\item Armar y añadir al circuito impreso los sensores y servomotores 
 			
-			\item Instalacion de la pi camera en la Raspberry
-			
 		\end{itemize}
 		
 		
@@ -232,23 +228,20 @@
 				\item Programacion del modulo de control de servomotores(\textbf{Puertas}).
 				\item Programacion del modulo del sensor de temperatura y humedad.
 				\item Programacion del modulo del sensor de presencia (PIR) para la deteccion de presencia.
-				\item Programacion del modulo receptor de comandos  Seriales \textbf{Arduino-Raspberry}.
-				\item Programacion del modulo para eventos listener \textbf{Raspberry-Firebase}.
-				\item Programacion del modulo para la pi camera(Streaming) en la \textbf{Raspberry}.
+				\item Programacion del modulo receptor de comandos  Seriales \textbf{Sim900-Raspberry}.
+				\item Programacion del modulo para la comunicacion para el protocolo MQTT \textbf{(Raspberry - Broadcast- cliente) }., mediante el uso de websockets
 			\end{list}
 			
-			\item Programacion de una app movil que permita controlar y monitorear varias viviendas al mismo momento. 
+			\item Programacion de un sitio web que permita controlar y monitorear varias viviendas al mismo momento. 
 			
-			\item Interfaces tanto para usuarios y administradores(con los permisos correspondientes).
+			\item Interfaz para que usuarios puedan manipular su vivienda.
 			
-			\item Implementacion de tecnologias como \textbf{firebase} para la interaccion de datos en tiempo real.
+			\item Implementacion de \textbf{Mosquitto(Broadcast)}, software que nos permite levantar un server para el uso del protocolo MQTT para la interaccion de datos en tiempo real con los clientes.
 			
-			\item Implementacion de tecnologias como React Native  para obtener una aplicacion movil multiplataforma para dispositivos moviles, IOs, Android y Windows phone.
+			\item Implementacion de tecnologias como React para obtener una SPA(single page application), responsive para el acceso desde cualquies dispositivo.
 			%\item Uso del microfono del celular para el facil uso de la aplicacion
 			
 			%%\item Entrenamiento de una IA(Inteligencia Artificial) que permitira el reconocimiento de ciertos comandos de voz en dispositivos moviles
-			
-			\item Configuracion de la app para la visualizacion de Streaming 
 			
 		\end{itemize}
 		
@@ -269,11 +262,11 @@
 		
 		\section{Novedad y aporte cientifico}
 		
-		El aporte cientifico del proyecto consiste en la liberacion del codigo fuente de la aplicacion movil multiplataforma , que permite la administracion y control de usuario y viviendas,  el firmware del microcontrolador  arduino y Raspberry, los esquematicos, diseños del circuito realizado y configuracion basica de una vivienda.\\
+		El aporte cientifico del proyecto consiste en la liberacion del codigo fuente del sistema multiplataforma , que permite la administracion y control de usuario y viviendas,  el firmware de la  Raspberry, los esquematicos, diseños del circuito realizado y configuracion basica de una vivienda.\\
 		
-		La novedad por la parte electronica radica en la elaboracion de un circuto para el control de una vivienda usando herramientas de software libre y open source como: Kicad, Arduino IDE, Raspian, Raspberry, y python.\\
+		La novedad por la parte electronica radica en la elaboracion de un circuto para el control de una vivienda usando herramientas de software libre y open source como: Kicad, Raspian, Raspberry Pi 2b, mcp3208 y python.\\
 		
-		La novedad por la parte informatica radica en la elaboracio de una aplicacion movil multiplataforma usando tecnologias como React Native y Django para el Backend. Tambien cabe resaltar el uso  Firebase con su base de datos en tiempo real. Uso de los recursos del dispositivo movil como el microfono para una mayor facilidad de uso.\\
+		La novedad por la parte informatica radica en la elaboracio de una aplicacion movil multiplataforma usando tecnologias como React  y Node-Express, MongoDB para el Backend. Tambien cabe resaltar el uso  del protocolo MQTT para que datos sean en tiempo real.
 		
 		
 		%%El uso de una IA(Inteligencia Artificial) para el reconocimiento de un comando de voz.
@@ -281,22 +274,35 @@
 		
 		\section{Desarrolo del proyecto}
 		El metodo de desarrollo comprende de 2 areas especificas de trabajo que daran como resaltado la interaccion entre la informatica y electronica la vivienda.
+
 		
+		\subsection{Sitio Web}
 		
-		\subsection{App Movil}
+		Consiste en un Sitio Web multiplataforma desarrollada con las siguientes tecnlogias Node, Express, React, Mosquitto, WebSockets.
 		
-		Consiste en un aplicacion movil multiplataforma desarrollada con las siguientes tecnlogias Django, React Native, Firebase y SQLite3.
-		Se restringira el uso de la app con diferentes permisos, tanto para usuarios como para administradores.
+		En el lado del Backend tenemos a Express  un framework para Nodejs, que nos permite la implementacion de middleware, generacion de tokens, manejos de las urls, manejo de contenido multimedia y facil manejo de datos asincronos gracias al motor V8 de google que usa.
 		
-		En el lado del Backend tenemos a Django un framework que maneja la administracion de usuarios, datos de los mismos, autentificacion, manejos de las urls para las transmisiones de Streaming, manejo de contenido multimedia, y seguridad atravez de sus middlewares.
+		Como modelo de datos de uso MongoDB, debido a que el tamaño de informacion que manejamos es relativamente pequeña.
 		
-		Para el lado del frontend se uso React Native debido a su portabilidad en dispositivos Android, IOs y Windows phone.
+		Para el lado del frontend se uso React debido a su gran eficiencia ya que solo mofidica nodos en el DOM que cambiaron de estados y no asi todo el DOM.
 		
-		La aplicacion movil multiplataforma es capaz de modificar la estructura de estados de una vivenda(Luces, Puertas, Sensores, ..etc), la cual esta una base de datos en tiempo real  en Firebase.
+		El Sistema es capaz de modificar la estructura de estados de una vivenda(Luces, Puertas, Sensores, ..etc), el cual tiene un websocket en el cliente el cual permite la comunicacion en tiempo real.
 		
-		Este modelo de comunicion permite administrar varios servers (Raspberrys) en tiempo real,  separamos la funcionalidad de la aplicacion con el Firmware de cada server (Raspberry).
+		Este modelo de comunicion permite administrar varios Raspberry(Viviendas ) en tiempo real,  separamos la funcionalidad de la aplicacion con el Firmware de cada Raspberry(Viviendas ).\\
 		
-		La forma de interaccion  entre la aplicacion movil  multiplataforma y un usuario consiste en el modelo  cliente-servidor. donde el cliente  envia peticiones http al servidor de firebase, el cual tiene almacenado estados de su vivenda. Una vez el servidor de firebase datecta un cambio en la estructura de esa vivienda  este informa a su server(Raspberry) y este modifica uno o varios estados(Enciender Luces, Activa Alarma, Abrir Garaje, ..etc).
+		La forma de interaccion  es la siguiente:
+		
+		\begin{itemize}
+			\item Cada Raspberry se comporta como un cliente-MQTT que es un subscritor y publicador de distintos topicos(sensores). Cada topico, hace referencia a sensores, actuadores, luces, servos,.. etc.
+			
+			\item En el Server del Sitio web existe un Server-Broadcast(Mosquitto-MQTT) que es el encargado de administrar la comunicacion entre clientes subscritos a topicos comunes. comunicando a cada cliente-MQTT si hubo cambios en el topico subcrito, en tiempo real.
+			
+			\item Tambien cada Cliente-Web es considerado un Cliente-MQTT, gracias a la implementacion de websockets, de esta manera podemos garantizar entregados al cliente-Web en tiempo real
+			
+			\item De la misma manera funciona cuando un Cliente-Web realiza un cambio de estado en el sitio Web, ya que este tiene una conexion Machine to Machine con la raspberry y con los demas clientes-Web que estan subscritos a ese topico.
+		\end{itemize}
+
+
 		
 		
 		\begin{figure}[h]
@@ -308,20 +314,20 @@
 			
 		\end{figure}
 		
-		
+		\newpage
 		\subsection{Firmware}
 		
-		Consiste en la parte del software que controla servomotores y sensores de una vivienda. Esto es controlado atravez del SDK de firebase,  el cual permite al server informarse si hubo un cambio en su base de datos o modifcar la misma. 
+		Consiste en la parte del software que controla servomotores y sensores de una vivienda. Esto es controlado atravez del la libreria \textbf{paho.mqtt.client},  el cual permite que un cliente-MQTT pueda recibir y enviar datos a otros clientes-MQTT atravez del Broadcast
 		
-		El mismo se encuentra con Raspian como S.O.  en la Raspberry  y Arduino en el microcontrolador .\\
+		La Raspberry tiene como S.O. Raspian-lite y un microchip(mcp3208) como conversor para entradas Analogicas a Digitales\\
 		
-		Debido a que los GPIOS de una Raspberry no tienen entradas analogicas se opto por usar Arduino para las lecturas de los siguente sensores: LDR( Fotoresistor ) y MQ135(sensor  de calidad de aire), este firmware  cuenta con las siguientes funcionalidades:
+		Debido a que los GPIOS de una Raspberry no tienen entradas analogicas los siguente sensores: LDR( Fotoresistor ) y MQ135(sensor  de calidad de aire) se leen atravez del conversor mcp3208, este firmware  cuenta con las siguientes funcionalidades:
 		
 		\begin{itemize}
 			\item Comunicaion
 			\begin{itemize}
-				\item escucha cambios de estados de firebase
-				\item mofifica estados de firebase
+				\item escucha cambios de estados por el protocolo MQTT
+				\item mofifica estados atravez del protocolo MQTT
 			\end{itemize}
 			
 			\item Servomotores y Actuadores 
@@ -334,6 +340,7 @@
 				\item Apagar Ventilador
 				\item Encender Alerta
 				\item Apagar Alerta
+				\item Llamada por el modulo GSM-sim900
 			\end{itemize}
 			\item Sensores
 			\begin{itemize}
@@ -343,17 +350,12 @@
 				\item medir el grado de iluminacion de un ambiente
 				
 			\end{itemize}
-			\item Camara	
-			\begin{itemize}
-				\item transmitir Streaming por un puerto del Server
-			\end{itemize}
 			
 		\end{itemize}
 		
 		\subsection{Componetes Electronicos}
-		Los componentes Electronicos usados para este proyecto fueron:\\\\
+		Los componentes Electronicos usados para este proyecto fueron:\\
 		\begin{itemize}
-			
 			\item \textbf{PCB}
 			
 			Placa de Circuito Impreso donde  se ubica todos los componestes electronicos que se uso para la realizacion del proyecto
@@ -382,22 +384,32 @@
 			\end{figure}
 			
 			
-			\item \textbf{Arduino}
+			\item \textbf{MCP2308}
 			
-			Arduino es una plataforma de hardware y software de código abierto, basada en una sencilla placa con entradas y salidas, analógicas y digitales, en un entorno de desarrollo que está basado en el lenguaje de programación Processing. Es decir, una plataforma de código abierto para prototipos electrónicos
+			El MCP3208-CI/P es un convertidor de analógico a digital de 12 bits con 8 canales (ADC) con interfaz SPI en encapsulado DIP de 16 pines. Este ADC combina alto rendimiento y bajo consumo de energía en un encapsulado pequeño, lo que lo hace ideal para aplicaciones de control integradas.
 			
 			\begin{figure}[h]
 				\centering
 				\begin{minipage}[t]{5cm}
-					\includegraphics[width=4cm]{images/arduino.jpeg}	 %importamos una imagen
-					\caption{ Arduino Nano}
+					\includegraphics[width=4cm]{images/mcp3208.jpeg}	 %importamos una imagen
+					\caption{MCP3208 }
 				\end{minipage}
 				
 			\end{figure}
+			\newpage
+			\item \textbf{SIM900 GSM}
+
+			El GPRS SIMCOM SIM900 GSM Quad band GSM shield es una tarjeta ultra compacta de comunicación inalámbrica. Además es compatible con todos los modelos de Arduino con el formato UNO, es decir, que la puedes controlar con otros microcontroladores también. Por último la tarjeta está basada en el módulo SIM900 GSM 4. El  GPRS está configurado y controlada por vía UART usando comandos AT. Por lo tanto sólo conecta la tarjeta al microcontrolador, Arduino, etc, y comienza a comunicarte a través de comandos AT. Ideal para sistemas remotos, comunicación recursiva, puntos de control, mandar mensajes de texto a celulares, etc
 			
-			
-			
-			
+			\begin{figure}[h]
+				\centering
+				\begin{minipage}[t]{5cm}
+					\includegraphics[width=4cm]{images/sim900.jpg}	 %importamos una imagen
+					\caption{SIM900 GSM}
+				\end{minipage}
+				
+			\end{figure}
+
 			\item \textbf{Servomotor}
 			
 			Dispositivos electromecánicos que consisten en un motor eléctrico, un juego de engranes y una tarjeta de control, todo confinado dentro de una carcasa de plástico. sus movimientos son por ancho de pulso y son medidos en grados
@@ -467,21 +479,7 @@
 					\caption{Fotoresistor }
 				\end{minipage}
 				
-			\end{figure}
-			
-			\item \textbf{Pi Camera}
-			
-			El módulo cámara de 5 megapíxeles esta diseñado específicamente para Raspberry Pi, con un lente de foco fijo. Es capaz de tomar imágenes estáticas de 2592 x 1944, y también es compatible con el formato de video 1080p30, 720p60 y 640x480p60/90.
-			
-			\begin{figure}[h]
-				\centering
-				\begin{minipage}[t]{4cm}
-					\includegraphics[width=2cm]{images/camerapi.jpeg}	 %importamos una imagen
-					\caption{Pi Camera }
-				\end{minipage}
-				
-			\end{figure}
-			
+			\end{figure}			
 			
 		\end{itemize}
 		
@@ -517,39 +515,13 @@
 		
 		
 		\section{Conclusiones y Recomendaciones}
-		A pesar de las tecnologias usadas en el proyecto, aun quedan cabos sueltos que hay que mejorar y resolver,tal es el caso del Streaming, ya que si se logro realizar la transmision, pero es muy lenta y no se logra visualizar con claridad, esto es debido a que usamos el Protocolo Http para la visualizacion y este no fue diseñado para compartir archivos tan pesados como son estos.\\
+		
+		A pesar de las tecnologias usadas en el proyecto, aun quedan cabos sueltos que hay que mejorar y resolver,tal es el caso la implementaion de Streaming atravez de protocolos que ayuden a transmicion latente\\
 		
 		Se recomienda tambien la implementacion de una IA (Inteligencia Artificial), para el reconocimiento de comando de voz. 
-		Que por ahora con la ayuda del React Native hacemos uso del microfono del dispositivo movil
+		Implementacion de React Native para la parte aplicaion Movil y hacer uso del microfono del dispositivo movil.\\\\
 		
-		
-		%\newpage
-		%\section{GLOSARIO DE TÉRMINOS}
-		%\subsection{Diccionario}
-		%\begin{itemize}
-		
-		%	\item \textbf{Arduino.- } Arduino es una plataforma de prototipos electrónica de código abierto (open – source) basada en hardware y software flexibles y  fáciles de usar. Está pensado e inspirado en artistas, diseñadores, y estudiantes de computación o robótica
-		
-		%	\item \textbf{Concurrecia.- } evento cuando  mas de un proceso intentan acceder al mismo recurso 
-		
-		%	\item \textbf{MVC .- }Arquitectura de software que separa los datos de una aplicación, la interfaz de usuario, y la lógica de control en tres componentes distintos.
-		
-		%	\item \textbf{Singleton.- } Es un patrón de diseño que permite restringir la creación de objetos pertenecientes a una clase o el valor de un tipo a un único objeto.Su intención consiste en garantizar que una clase solo tenga una instancia y proporcionar un punto de acceso global a ella.
-		
-		%	\item \textbf{Eficiencia Espacial.- }Cantidad de recursos espaciales ( de  almacén) que un algoritmo consume o necesita para su 	ejecución
-		
-		%	\item \textbf{SCV.- }  Software que administra el acceso a un conjunto de ficheros, y mantiene un historial de cambios realizados. El control de versiones es útil para guardar cualquier documento que cambie con frecuencia, como código fuente, documentación o ficheros de configuración.
-		
-		%	\item \textbf{XML.- } XML proviene de eXtensible Markup Language (“Lenguaje de Marcas Extensible”). Se trata de un metalenguaje (un lenguaje que se utiliza para decir algo acerca de otro) extensible de etiquetas que fue desarrollado por el Word Wide Web Consortium (W3C)
-		
-		%	\item \textbf{Comunicacion Asincrona.- }Es la conexión que se establece entre el cliente y el servidor que permite la transferencia de datos no sincrónica, o sea el cliente puede realizar varias peticiones al servidor sin necesidad de esperar por la respuesta de la primera. 
-		
-		
-		%\end{itemize}
-		
-		\newpage
-		
-		
+
 		\section{Bibliografia}
 		
 		

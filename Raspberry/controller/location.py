@@ -3,11 +3,9 @@
 
 from gpiozero import LED, AngularServo
 from connectionMQTT import ConnectionMQTT
-from time import sleep
-from threading import Thread
 from data import setData, getData
 
-connection = ConnectionMQTT.getInstance()
+
 
 
 class Led(object):
@@ -30,7 +28,8 @@ class LedConnection( Led ):
 
     def __init__(self, numberPin, topic):
         super().__init__(numberPin)
-        connection.addSubscribe(topic, self.callback)
+        self.connection = ConnectionMQTT.getInstance()
+        self.connection.addSubscribe(topic, self.callback)
         self.topic = topic
         self.start()
 
@@ -39,14 +38,13 @@ class LedConnection( Led ):
 
     def start(self):
         value = getData(self.topic)
+        print(value)
         if value:
-            print('primero lo encendio')
             self.turnOn()
         else:
-            print('primero lo apago')
             self.turnOff()
-        print('el 1er valor es:', self.led.value)
-        connection.addPublished(self.topic, value )
+        print('valor',value)
+        self.connection.addPublished(self.topic, value )
 
     def callback(self, topic, value):
 
@@ -55,12 +53,11 @@ class LedConnection( Led ):
             if value:
                 self.turnOn()
                 setData(topic, value)
-                print('se prendio', self.value())
             else:
                 self.turnOff()
                 setData(topic, value)
-                print('se apago', self.value())
 
+            print('valor de ',self.value())
 
 
 class Door(object):
@@ -85,21 +82,18 @@ class DoorConnection( Door ):
 
     def __init__(self, numberPin, minAngle, maxAngle, topic ):
         super().__init__(numberPin, minAngle, maxAngle)
-        connection.addSubscribe(topic, self.callback)
+        self.connection = ConnectionMQTT.getInstance()
+        self.connection.addSubscribe(topic, self.callback)
         self.topic = topic
         self.start()
 
     def start(self):
         value = getData(self.topic)
         if value == self.minAngle:
-            print('primero se cerro la puerta')
             self.closeDoor()
         else:
-            print('primero se abrio la puerta')
             self.openDoor()
-
-        print('el 1er valor es:', self.angularServo.angle)
-        connection.addPublished(self.topic, value)
+        self.connection.addPublished(self.topic, value)
 
 
     def value(self):
@@ -113,11 +107,9 @@ class DoorConnection( Door ):
             if value == self.minAngle:
                 self.closeDoor()
                 setData(topic, value)
-                print('se cerro la puerta', self.value())
             elif value == self.maxAngle:
                 self.openDoor()
                 setData(topic, value)
-                print('se abrio la puerta', self.value())
 
 
 class Ambient(object):
