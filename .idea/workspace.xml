@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26a1f793-440d-4522-80ad-7b1f0d66319f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/Raspberry/controller/connectionGSM.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raspberry/controller/connectionMCP.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raspberry/controller/pruebasMQTT.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Raspberry/resources/respaldo.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/document.aux" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/document.out" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/.~lock.squema.odt#" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/document.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/document.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/document.tex" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/document.toc" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/document.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Documentation/images/esquema1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/images/esquema1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentation/squema.odt" beforeDir="false" afterPath="$PROJECT_DIR$/Documentation/squema.odt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/controller/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentation/images/esquemaAntiguo.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/controller/location.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/location.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/controller/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/controller/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/main2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/controller/sensors.py" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/controller/sensors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/generationStruct/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/generationStruct/generation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/pruebas_firebase_user/cred.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/pruebas_firebase_user/pruebas_cred.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/pruebas_firebase_user/update_databases.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Raspberry/resources/cred.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Raspberry/resources/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/Raspberry/resources/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Raspberry/resources/respaldo.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,107 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="connectionMQTT.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/data.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Raspberry/resources/data.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pruebasMQTT.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/pruebasMQTT.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="respaldo.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/resources/respaldo.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1143">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#39#60#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/location.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="825">
-              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
-              <folding>
-                <element signature="e#36#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sensors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/sensors.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="63" column="21" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="21" />
-              <folding>
-                <element signature="e#38#79#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="connectionMCP.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMCP.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#27#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main2.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Raspberry/controller/main2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -158,12 +46,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>SA</find>
-      <find>h1</find>
-      <find>checkPuertaP</find>
-      <find>setData</find>
-      <find>ldr</find>
-      <find>Ldr</find>
       <find>pathHumidity</find>
       <find>Conexion</find>
       <find>threading</find>
@@ -188,6 +70,12 @@
       <find>2</find>
       <find>4</find>
       <find>24</find>
+      <find>27</find>
+      <find>1</find>
+      <find>ldr</find>
+      <find>null</find>
+      <find>dht</find>
+      <find>connect</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -231,12 +119,12 @@
         <option value="$PROJECT_DIR$/Raspberry/resources/superRespaldo.json" />
         <option value="$PROJECT_DIR$/Raspberry/resources/respaldo.json" />
         <option value="$PROJECT_DIR$/Raspberry/controller/main.py" />
-        <option value="$PROJECT_DIR$/Raspberry/controller/sensors.py" />
         <option value="$PROJECT_DIR$/Raspberry/controller/connectionMCP.py" />
-        <option value="$PROJECT_DIR$/Raspberry/resources/data.json" />
         <option value="$PROJECT_DIR$/Raspberry/controller/location.py" />
-        <option value="$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py" />
         <option value="$PROJECT_DIR$/Raspberry/controller/pruebasMQTT.py" />
+        <option value="$PROJECT_DIR$/Raspberry/controller/sensors.py" />
+        <option value="$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py" />
+        <option value="$PROJECT_DIR$/Raspberry/resources/data.json" />
       </list>
     </option>
   </component>
@@ -246,14 +134,20 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/WebSite/node_modules" />
+    <handled-path value="$PROJECT_DIR$/webProject/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="1366" />
-    <option name="y" value="20" />
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/WebSite/package.json" />
+      <path value="$PROJECT_DIR$/webProject/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="36" />
     <option name="width" value="1366" />
-    <option name="height" value="728" />
+    <option name="height" value="712" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -289,7 +184,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -332,7 +226,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="20" width="1366" height="728" extended-state="0" />
+    <frame x="0" y="36" width="1366" height="712" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -341,7 +236,7 @@
       <window_info anchor="bottom" id="Python Console" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.21052632" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.29210925" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.15530303" />
       <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="R Graphics" order="3" />
@@ -433,44 +328,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/main2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Raspberry/resources/superRespaldo.json" />
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMCP.py">
+    <entry file="file://$PROJECT_DIR$/Raspberry/resources/respaldo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/sensors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="63" column="21" selection-start-line="63" selection-start-column="16" selection-end-line="63" selection-end-column="21" />
-          <folding>
-            <element signature="e#38#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#39#60#0" expanded="true" />
-          </folding>
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -484,6 +346,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1875">
+          <caret line="132" column="21" selection-start-line="132" selection-start-column="21" selection-end-line="132" selection-end-column="21" />
+          <folding>
+            <element signature="e#38#79#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Raspberry/controller/pruebasMQTT.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -491,31 +377,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMCP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="58" column="75" selection-start-line="58" selection-start-column="75" selection-end-line="58" selection-end-column="75" />
+          <folding>
+            <element signature="e#39#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Raspberry/controller/main2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Raspberry/resources/data.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/resources/respaldo.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1143">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Raspberry/controller/connectionMQTT.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="23" lean-forward="true" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="23" />
+        <state relative-caret-position="90">
+          <caret line="6" column="7" lean-forward="true" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
         </state>
       </provider>
     </entry>

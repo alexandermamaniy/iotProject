@@ -6,6 +6,7 @@ import threading
 from decouple import config
 
 
+
 class ConnectionMQTT():
     connection = None
 

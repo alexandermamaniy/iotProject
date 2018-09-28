@@ -1,0 +1,24 @@
+{
+  "name": "webproject",
+  "version": "1.0.0",
+  "description": "parte web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon server/server.js -e js,css,html"
+  },
+  "author": "Alexander Mamani",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.1",
+    "body-parser": "^1.18.3",
+    "colors": "^1.3.2",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.18",
+    "mongoose-unique-validator": "^2.0.2",
+    "underscore": "^1.9.1"
+  }
+}
