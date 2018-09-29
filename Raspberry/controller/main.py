@@ -12,30 +12,29 @@ import json, signal
 def loadExtras():
 
     global structura, home
-    keyUser = "".join(structura.keys())
+    #keyUser = "".join(structura.keys())
+    keyUser = structura['user']
     keyLocation = 'Extras'
     i = 0
-    for extra in structura[keyUser][keyLocation]:
-        for key, pin in extra.items():
-            pin = structura[keyUser][keyLocation][i][key]['pin']
-            if key == 'fan':
-                classE = Fan(pin)
+    for keyExtra, valueExtra  in structura[keyLocation].items():
+        pin = structura[keyLocation][keyExtra]['pin']
+        if keyExtra == 'fan':
+            classE = Fan(pin)
 
-            elif key == 'alertSteal':
-                classE = Led(pin)
+        elif keyExtra == 'alertSteal':
+            classE = Led(pin)
 
-            elif key == 'lightYard':
-                classE = Led(pin)
+        elif keyExtra == 'lightYard':
+            classE = Led(pin)
 
-            elif key == 'ldr':
-                lightYard = home.getExtra('lightYard')
-                classE = Ldr(lightYard)
+        elif keyExtra == 'ldr':
+            lightYard = home.getExtra('lightYard')
+            classE = Ldr(lightYard)
 
-            elif key == 'buzzer':
-                classE = BuzzerSensor(pin)
+        elif keyExtra == 'buzzer':
+            classE = BuzzerSensor(pin)
 
-            home.addExtra(key, classE)
-        i+=1
+        home.addExtra(keyExtra, classE)
 
 
 if __name__ == "__main__":
@@ -46,75 +45,73 @@ if __name__ == "__main__":
 
     home = Home()
     loadExtras()
-    for keyUser, valueUser in structura.items():
-        # user
-        for keyLocation, valueLocation in valueUser.items():
-            if keyLocation == 'Sensors':
-                for keySensor, valueSensor in valueLocation.items():
-                    if keySensor == 'dht11':
-                        pathHumidity = "{}/{}/{}/humidity".format(keyUser,keyLocation,keySensor)
-                        pathTemperature = "{}/{}/{}/temperature".format(keyUser,keyLocation,keySensor)
-                        pin = structura[keyUser][keyLocation][keySensor]['pin']
-                        fan = home.getExtra('fan')
-                        dht11 = DHT11(pin,pathTemperature,pathHumidity,fan)
-                        home.addSensors(keySensor, dht11)
+    keyUser = structura['user']
 
-                    elif keySensor == 'mq135':
-                        pathGas = "{}/{}/{}/gas".format(keyUser,keyLocation,keySensor)
-                        buzzer = home.getExtra('buzzer')
-                        alertSteal = home.getExtra('alertSteal')
-                        mq135 = MQ135(pathGas, buzzer, alertSteal)
-                        home.addSensors(keySensor, mq135)
+    for keyLocation, valueLocation in structura.items():
+        if keyLocation == 'Sensors':
+            for keySensor, valueSensor in valueLocation.items():
+                if keySensor == 'dht11':
+                    pathHumidity = "{}/{}/{}/humidity".format(keyUser,keyLocation,keySensor)
+                    pathTemperature = "{}/{}/{}/temperature".format(keyUser,keyLocation,keySensor)
+                    pin = structura[keyLocation][keySensor]['pin']
+                    fan = home.getExtra('fan')
+                    dht11 = DHT11(pin,pathTemperature,pathHumidity,fan)
+                    home.addSensors(keySensor, dht11)
 
-                    elif keySensor == 'pir':
-                        pathIsActive = "{}/{}/{}/isActive".format(keyUser, keyLocation, keySensor)
-                        pathSteal = "{}/{}/{}/steal".format(keyUser, keyLocation, keySensor)
-                        pin = structura[keyUser][keyLocation][keySensor]['pin']
-                        buzzer = home.getExtra('buzzer')
-                        alertSteal = home.getExtra('alertSteal')
-                        pir = PIR(pin, pathSteal, pathIsActive, buzzer, alertSteal)
-                        home.addSensors(keySensor, pir)
+                elif keySensor == 'mq135':
+                    pathGas = "{}/{}/{}/gas".format(keyUser,keyLocation,keySensor)
+                    buzzer = home.getExtra('buzzer')
+                    alertSteal = home.getExtra('alertSteal')
+                    mq135 = MQ135(pathGas, buzzer, alertSteal)
+                    home.addSensors(keySensor, mq135)
 
-            elif keyLocation == 'General':
-                general = AmbientGeneral()
+                elif keySensor == 'pir':
+                    pathIsActive = "{}/{}/{}/isActive".format(keyUser, keyLocation, keySensor)
+                    pathSteal = "{}/{}/{}/steal".format(keyUser, keyLocation, keySensor)
+                    pin = structura[keyLocation][keySensor]['pin']
+                    buzzer = home.getExtra('buzzer')
+                    alertSteal = home.getExtra('alertSteal')
+                    pir = PIR(pin, pathSteal, pathIsActive, buzzer, alertSteal)
+                    home.addSensors(keySensor, pir)
 
-                for keyGeneral, valueGeneral in valueLocation.items():
-                    pin = structura[keyUser][keyLocation][keyGeneral]['pin']
-                    path = "{}/{}/{}/value".format(keyUser, keyLocation, keyGeneral )
+        elif keyLocation == 'General':
+            general = AmbientGeneral()
 
-                    if keyGeneral == 'frontDoor':
-                        minAngle = structura[keyUser][keyLocation][keyGeneral]['min_angle']
-                        maxAngle = structura[keyUser][keyLocation][keyGeneral]['max_angle']
-                        general.addFrontDoor(pin, minAngle, maxAngle, path)
+            for keyGeneral, valueGeneral in valueLocation.items():
+                pin = structura[keyLocation][keyGeneral]['pin']
+                path = "{}/{}/{}/value".format(keyUser, keyLocation, keyGeneral )
 
-                    elif keyGeneral == 'garageDoor':
-                        minAngle = structura[keyUser][keyLocation][keyGeneral]['min_angle']
-                        maxAngle = structura[keyUser][keyLocation][keyGeneral]['max_angle']
-                        general.addGarageDoor(pin, minAngle, maxAngle, path)
+                if keyGeneral == 'frontDoor':
+                    minAngle = structura[keyLocation][keyGeneral]['min_angle']
+                    maxAngle = structura[keyLocation][keyGeneral]['max_angle']
+                    general.addFrontDoor(pin, minAngle, maxAngle, path)
 
-                    elif keyGeneral == 'lightCorridor':
-                        general.addLightCorridor(pin, path)
+                elif keyGeneral == 'garageDoor':
+                    minAngle = structura[keyLocation][keyGeneral]['min_angle']
+                    maxAngle = structura[keyLocation][keyGeneral]['max_angle']
+                    general.addGarageDoor(pin, minAngle, maxAngle, path)
 
-                home.setGeneral(general)
+                elif keyGeneral == 'lightCorridor':
+                    general.addLightCorridor(pin, path)
 
-            elif keyLocation == 'Extras':
-                pass
+            home.setGeneral(general)
 
-            else:
-                i = 0
-                for location in valueLocation:
-                    ambient = Ambient()
-                    for k in location.keys():
-                        path = "{}/{}/{}/{}/value".format(keyUser,keyLocation,i,k)
-                        pin = structura[keyUser][keyLocation][i][k]['pin']
-                        print('estamos imprimiendo',type(path), type(pin))
-                        if k == 'light':
-                            ambient.addLight(pin, path)
-                        elif k == 'door':
-                            minAngle = structura[keyUser][keyLocation][i][k]['min_angle']
-                            maxAngle = structura[keyUser][keyLocation][i][k]['max_angle']
-                            ambient.addDoor(pin, minAngle, maxAngle, path)
-                    home.addAmbient(keyLocation, ambient)
-                    i += 1
+        elif keyLocation == 'Bathrooms' or keyLocation == 'Cookings' or keyLocation == 'LivingRooms' or keyLocation == 'Rooms':
+            i = 0
+            for location in valueLocation:
+                ambient = Ambient()
+                print("este es el erro",location)
+                for k in location.keys():
+                    path = "{}/{}/{}/{}/value".format(keyUser,keyLocation,i,k)
+                    pin = structura[keyLocation][i][k]['pin']
+                    print('estamos imprimiendo',type(path), type(pin))
+                    if k == 'light':
+                        ambient.addLight(pin, path)
+                    elif k == 'door':
+                        minAngle = structura[keyLocation][i][k]['min_angle']
+                        maxAngle = structura[keyLocation][i][k]['max_angle']
+                        ambient.addDoor(pin, minAngle, maxAngle, path)
+                home.addAmbient(keyLocation, ambient)
+                i += 1
     print("Start !!!!")
     signal.pause()

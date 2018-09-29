@@ -1,23 +1,23 @@
 
 {
   "user": "pepito2",
-  "Extras" : [
-    {"lightYard" : {
-      "pin" : 24
-    }},
-    {"buzzer": {
-      "pin" : 18
-    }},
-      {"fan": {
-      "pin" : 16
-    }},
-    {"alertSteal" : {
-      "pin" : 22
-    }},
-    {"ldr": {
-      "pin" : null
-    }}
-  ],
+  "Extras" : {
+    "lightYard": {
+      "pin": 24
+    },
+    "buzzer": {
+      "pin": 18
+    },
+    "fan": {
+      "pin": 16
+    },
+    "alertSteal": {
+      "pin": 22
+    },
+    "ldr": {
+      "pin": null
+    }
+  },
   "Bathrooms" : [ {
     "door" : {
       "pin":0,

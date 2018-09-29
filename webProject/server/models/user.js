@@ -10,6 +10,10 @@ let rolesSuccess = {
 }
 
 let userSchema = new Schema({
+  home: {
+    type: Schema.Types.ObjectId,
+    ref: 'Home'
+  },
   name: {
     type: String,
     required: [true, 'El nombre es necesario']

@@ -18,7 +18,7 @@ def saveData(struc):
 
 def setData(path, value):
     struc = openData()
-    path = path.split('/')
+    path = path.split('/')[1:]
     ref = struc
     for i in range(len(path)-1):
         ref = ref[int(path[i])] if len(path[i]) == 1 else ref[path[i]]
@@ -27,7 +27,7 @@ def setData(path, value):
 
 def getData(path):
     struc = openData()
-    path = path.split('/')
+    path = path.split('/')[1:]
     ref = struc
     for i in range(len(path) - 1):
         ref = ref[int(path[i])] if len(path[i]) == 1 else ref[path[i]]
