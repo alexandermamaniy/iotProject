@@ -14,9 +14,11 @@ let userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Home'
   },
-  name: {
-    type: String,
-    required: [true, 'El nombre es necesario']
+  information: {
+    firstName: String,
+    lastName: String,
+    address: String,
+    cellphone: String
   },
   email: {
     type: String,
