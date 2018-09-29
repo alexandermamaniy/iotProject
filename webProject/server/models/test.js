@@ -11,9 +11,14 @@ mongoose.connect('mongodb://localhost/projectSCESI', (err, resp) => {
 
 
 let user = new User({
-  name: 'test1',
-  email: 'test1@gmail.com',
-  password: 'test1234',
+  information: {
+    firstName: 'Pepito',
+    lastName: 'Perez',
+    address: 'Av La paz entre Hernando Silez',
+    cellphone: '68685411'
+  },
+  email: 'akeymy4@gmail.com',
+  password: 'pepito1234',
   home: '5baeb94cbd50601887001975'
 })
 
