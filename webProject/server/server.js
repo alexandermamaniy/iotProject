@@ -5,6 +5,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
+const hbs = require('hbs')
 
 const app = express()
 
@@ -20,6 +21,12 @@ app.use(require('./routes/index'))
 // habilitar la carpeta public como publica
 
 app.use(express.static(path.resolve(__dirname, '../public')))
+
+// Express con HBS engine
+app.set('view engine', 'hbs')
+
+// registramos una carpeta donde buscara hbs
+hbs.registerPartials(path.join(__dirname, 'views/parciales'))
 
 mongoose.connect(process.env.URLDB, (err, resp) => {
   if (err) {

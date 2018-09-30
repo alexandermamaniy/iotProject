@@ -14,7 +14,7 @@ const User = require('../models/user')
 
 app.post('/login', (req, res) => {
   let body = req.body
-
+  
   User.findOne({email: body.email}, (err, userDB) => {
     if (err) {
       return res.status(500).json({
