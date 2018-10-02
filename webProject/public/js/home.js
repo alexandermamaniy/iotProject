@@ -1,6 +1,6 @@
 ((ajax) => {
 
-  const [READY_STATE_COMPLETE, OK, NOT_FOUND] = [4, 200, 400]
+  const [READY_STATE_COMPLETE, OK] = [4, 200, 400]
   
   let sendAjax = () => {
     return new Promise((resolve, reject) => {
