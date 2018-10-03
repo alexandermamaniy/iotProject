@@ -15,3 +15,6 @@ __pycache__
 
 WEBPROJECT/node_modules
 WEBPROJECT/.git
+
+react-app/node_modules
+react-app/node_modules
