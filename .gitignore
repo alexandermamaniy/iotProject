@@ -13,3 +13,5 @@
 # pycharm cache
 __pycache__
 
+WEBPROJECT/node_modules
+WEBPROJECT/.git

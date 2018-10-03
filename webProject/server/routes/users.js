@@ -13,7 +13,7 @@ const _ = require('underscore')
 
 const app = express()
 
-app.get('/user', verificaToken, (req, res) => {
+app.get('/user', verificaToken,(req, res) => {
   let id = req.user._id
   User.findById(id)
   .populate('home', 'Bathrooms Cookings LivingRooms Rooms Sensors General')
@@ -41,34 +41,7 @@ app.get('/user', verificaToken, (req, res) => {
 })
 
 
-app.get('/user/:id', verificaToken, (req, res) => {
-  let id = req.params.id
-  User.findById(id)
-  .populate('home', 'Bathrooms Cookings LivingRooms Rooms Sensors General')
-  .exec((err, userDB) => {
-    if (err) {
-      return res.status(500).json({
-        ok: false,
-        err
-      })
-    }
-
-    if(!userDB) {
-      return res.status(400).json({
-        ok: false,
-        err: {
-          message: 'ID de usuario no existente'
-        }
-      })
-    }
-    res.json({
-      ok: true,
-      user: userDB
-    })
-  })
-})
-
-app.post('/user', (req, res) => {
+app.post('/user', verificaToken,(req, res) => {
   let body = req.body
 
   let user = new User({
@@ -98,24 +71,5 @@ app.post('/user', (req, res) => {
     })
   })
 })
-
-// app.put('/user/:id', (req, res) => {
-//   let id = req.params.id
-//   let body = _.pick(req.body, ['information', 'email', 'img', 'role', 'state'])
-
-//   // definimo tambien validaciones para que pueda retornar todo el objeto mofificado, y que corra las validaciones definidos en el modelo
-//   User.findByIdAndUpdate(id, body, {new: true, runValidators: true}, (err, userDB) => {
-//     if (err) {
-//       return res.status(400).json({
-//         ok: false,
-//         err
-//       })
-//     }
-//     res.json({
-//       ok: true,
-//       user: userDB
-//     })
-//   })
-// })
 
 module.exports = app
