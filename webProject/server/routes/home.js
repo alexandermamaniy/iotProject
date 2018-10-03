@@ -14,7 +14,10 @@ const _ = require('underscore')
 const app = express()
 
 app.get('/home', (req, res) => {
-  res.render('home')
+  // res.render('home')
+  res.json({
+    message: 'Home'
+  })
 })
 
 module.exports = app

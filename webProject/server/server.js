@@ -6,8 +6,12 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const path = require('path')
 const hbs = require('hbs')
-
 const app = express()
+
+var cors = require('cors');
+
+// use cors para que cualquier usuario pueda pedir servicios
+app.use(cors({origin: '*'}));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -22,11 +26,6 @@ app.use(require('./routes/index'))
 
 app.use(express.static(path.resolve(__dirname, '../public')))
 
-// Express con HBS engine
-app.set('view engine', 'hbs')
-
-// registramos una carpeta donde buscara hbs
-hbs.registerPartials(path.join(__dirname, 'views/parciales'))
 
 mongoose.connect(process.env.URLDB, (err, resp) => {
   if (err) {
