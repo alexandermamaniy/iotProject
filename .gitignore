@@ -13,8 +13,8 @@
 # pycharm cache
 __pycache__
 
-WEBPROJECT/node_modules
-WEBPROJECT/.git
+webProject/node_modules
+webProject/.git
 
 react-app/node_modules
-react-app/node_modules
+react-app/.git
