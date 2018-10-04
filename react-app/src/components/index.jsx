@@ -9,7 +9,9 @@ import {
 import Home from './pages/Home'
 import Login from './pages/Login'
 import {sendGET} from './helpers/methods'
+import LoginForm from './pages/LoginForm'
 const hostname = 'http://localhost:3000'
+
 class App extends Component {
   constructor (...props) {
     super (...props)
@@ -38,8 +40,6 @@ class App extends Component {
   modifiedState (data) {
     this.setState({data})
   }
-  
-  
 
   render() {
     return (
@@ -53,7 +53,7 @@ class App extends Component {
               <Redirect  to="/login" />
           }
           <Switch>
-            <PrivateRoute component={Login} mofifieState={this.modifiedState} path='/login'  />
+            <PrivateRoute component={LoginForm} mofifieState={this.modifiedState} path='/login'  />
             <PrivateRoute  component={Home} mofifieState={this.modifiedState} path='/'  />
           </Switch>
         </div>
