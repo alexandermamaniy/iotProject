@@ -8,6 +8,10 @@
     "react-dom": "^16.5.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.3",
+<<<<<<< HEAD
+=======
+    "semantic-ui-css": "^2.4.0",
+>>>>>>> 0ca764c53f890c12f28b2860ec0981d5cdc4a6c1
     "semantic-ui-react": "^0.82.5"
   },
   "scripts": {
