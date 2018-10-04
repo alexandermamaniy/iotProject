@@ -6,6 +6,7 @@ import {
   Redirect,
   Switch
 } from 'react-router-dom'
+import 'semantic-ui-css/semantic.min.css';
 import Home from './pages/Home'
 import Login from './pages/Login'
 import {sendGET} from './helpers/methods'
