@@ -7,7 +7,7 @@ const hostname = 'http://localhost:3000'
 export default class LoginForm extends Component {
   constructor (...props) {
     super (...props)
-
+    
     this.state = {
       logingMessage: false
     }
@@ -42,7 +42,7 @@ export default class LoginForm extends Component {
         <Grid textAlign='center' verticalAlign='middle'>
           <Grid.Column style={{ maxWidth: 450 }}>
             <Header as='h2' color='teal' textAlign='center'>
-              <Image src='/logo.png' /> Log-in to your account
+              <Image src='/logo.png' /> Login
             </Header>
             <Form  id="form-login" size='large'>
               <Segment stacked>

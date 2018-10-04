@@ -40,7 +40,10 @@ const sendPOST = (url, formData) => {
   })
 }
 
+const logout = ()  => window.localStorage.removeItem('Authorization')
+
 export {
   sendGET,
-  sendPOST
+  sendPOST,
+  logout
 }
