@@ -58,9 +58,88 @@ const Ambientes =() =>(
           </figcaption>     
       </figure>    
     </div>
-  </section>
-)
 
+    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">    
+      <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">    
+          <img src="images/dormitorio1.jpg" alt="portfolio-2"></img>  
+          <figcaption class="text-center">
+              <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+              <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
+          </figcaption>    
+      </figure>    
+
+    </div>    
+
+    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">    
+
+    <figure class="wow zoomIn" data-wow-delay="900ms" data-wow-duration="1000ms">
+    <img src="images/cocina1.jpg" alt="portfolio-3"></img>
+    <figcaption class="text-center">
+        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+        <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
+    </figcaption>
+
+</figure>
+
+</div>
+
+<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
+
+<figure class="wow zoomIn" data-wow-delay="1000ms" data-wow-duration="1000ms">
+    <img src="images/baño1.jpg" alt="portfolio-4"></img>
+    <figcaption class="text-center">
+        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+        <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
+    </figcaption>
+</figure>
+</div>
+
+<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
+
+<figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
+    <img src="images/people1.jpg" alt="portfolio-2"></img>
+    <figcaption class="text-center">
+        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+        <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
+    </figcaption>
+
+</figure>
+
+</div>
+<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
+
+<figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
+    <img src="images/pasillo1.jpg" alt="portfolio-2"></img>
+    <figcaption class="text-center">
+        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+            <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
+        </figcaption>
+    
+    </figure>
+    
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
+    
+    <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
+        <img src="images/temperatuaa.jpg" alt="portfolio-2"></img>
+        <figcaption class="text-center">
+            <a class="portfolio-icon" href="#"><i class="fa fa-thermometer"></i></a>
+    </figure>
+    </div>
+    
+    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
+    
+    <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
+        <img src="images/encendedor1.jpg" alt="portfolio-2"></img>
+        <figcaption class="text-center">
+            <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+            <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
+        </figcaption>
+    </figure>
+    </div>
+      </section>
+    )
+    
 
 const Head = () => (
   <head>
