@@ -7,7 +7,6 @@ import {
   Switch
 } from 'react-router-dom'
 import Home from './pages/Home'
-import Login from './pages/Login'
 import {sendGET} from './helpers/methods'
 import LoginForm from './pages/LoginForm'
 const hostname = 'http://localhost:3000'
