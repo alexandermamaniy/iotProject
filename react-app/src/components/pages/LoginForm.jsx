@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
 import './LoginForm.css'
 import {sendPOST} from '../helpers/methods'
-const hostname = 'http://localhost:3000'
+const hostname = 'http://akey96:3000'
 
 export default class LoginForm extends Component {
   constructor (...props) {
