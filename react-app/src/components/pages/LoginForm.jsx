@@ -53,9 +53,9 @@ export default class LoginForm extends Component {
                 </Button>
               </Segment>
             </Form>
-            <Message>
-              New to us? <a href='#'>Sign Up</a>
-            </Message>
+            {/* <Message> */}
+              {/* New to us? <a href='#'>Sign Up</a> */}
+            {/* </Message> */}
           </Grid.Column>
         </Grid>
       </div>

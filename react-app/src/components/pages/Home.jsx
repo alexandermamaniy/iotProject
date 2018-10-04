@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
+import './Home.css'
 import { PageHeader, Carousel } from 'react-bootstrap'
 import {
   Button,
@@ -36,6 +37,30 @@ export default class Home extends Component {
     )
   }
 }
+
+const Ambientes =() =>(
+  <section id="work" class="portfolio3">
+
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1 class="section-title">Our Hard Work</h1>
+      </div>
+    </div>
+
+       <div class="row portfolio-content">
+          <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item
+              <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms>
+
+                  <img src="images/dormitorio1.jpg" alt="portfolio-2
+                  <figcaption class="text-center">
+                      <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
+                      <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
+                  </figcaptio
+              </figur
+          </div>
+
+  </section>
+)
 
 
 const Head = () => (
