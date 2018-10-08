@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import './Home.css'
+// import './Home.css'
 import { PageHeader, Carousel } from 'react-bootstrap'
 import {
   Button,
@@ -25,128 +25,127 @@ export default class Home extends Component {
   }
   render () {
     return (
-
       <div>
-        <Head/>
-        <PageHeader>
-          DOMOTICA <small>para vivienda</small>
-        </PageHeader>
-
-        <Carrusel/>
+        {/* <Head/> */}
+        {/* <PageHeader> */}
+          {/* DOMOTICA <small>para vivienda</small> */}
+        {/* </PageHeader> */}
+// 
+        {/* <Carrusel/> */}
       </div>
-    )
-  }
-}
-
-const Ambientes =() =>(
-  <section id="work" class="portfolio3">
-
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <h1 class="section-title">Our Hard Work</h1>
-      </div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-      <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
-      
-          
-          <img src="images/sala1.jpg" alt="portfolio-2"></img>>
-      
-          <figcaption class="text-center">
-              <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-              <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
-          </figcaption>     
-      </figure>    
-    </div>
-
-    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">    
-      <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">    
-          <img src="images/dormitorio1.jpg" alt="portfolio-2"></img>  
-          <figcaption class="text-center">
-              <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-              <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
-          </figcaption>    
-      </figure>    
-
-    </div>    
-
-    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">    
-
-    <figure class="wow zoomIn" data-wow-delay="900ms" data-wow-duration="1000ms">
-    <img src="images/cocina1.jpg" alt="portfolio-3"></img>
-    <figcaption class="text-center">
-        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-        <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
-    </figcaption>
-
-</figure>
-
-</div>
-
-<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-
-<figure class="wow zoomIn" data-wow-delay="1000ms" data-wow-duration="1000ms">
-    <img src="images/baño1.jpg" alt="portfolio-4"></img>
-    <figcaption class="text-center">
-        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-        <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a>
-    </figcaption>
-</figure>
-</div>
-
-<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-
-<figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
-    <img src="images/people1.jpg" alt="portfolio-2"></img>
-    <figcaption class="text-center">
-        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-        <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
-    </figcaption>
-
-</figure>
-
-</div>
-<div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-
-<figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
-    <img src="images/pasillo1.jpg" alt="portfolio-2"></img>
-    <figcaption class="text-center">
-        <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-            <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
-        </figcaption>
-    
-    </figure>
-    
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-    
-    <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
-        <img src="images/temperatuaa.jpg" alt="portfolio-2"></img>
-        <figcaption class="text-center">
-            <a class="portfolio-icon" href="#"><i class="fa fa-thermometer"></i></a>
-    </figure>
-    </div>
-    
-    <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">
-    
-    <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">
-        <img src="images/encendedor1.jpg" alt="portfolio-2"></img>
-        <figcaption class="text-center">
-            <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a>
-            <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a>
-        </figcaption>
-    </figure>
-    </div>
-      </section>
-    )
-    
-
-const Head = () => (
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossOrigin="anonymous"/>
-  </head>
-)
+     )
+   }
+ }
+// 
+// const Ambientes =() =>(
+  // <section id="work" class="portfolio3">
+// 
+    {/* <div class="row"> */}
+      {/* <div class="col-md-12 text-center"> */}
+        {/* <h1 class="section-title">Our Hard Work</h1> */}
+      {/* </div> */}
+    {/* </div> */}
+    {/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+      {/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms"> */}
+      {/*  */}
+          {/*  */}
+          {/* <img src="images/sala1.jpg" alt="portfolio-2"></img>> */}
+      {/*  */}
+          {/* <figcaption class="text-center"> */}
+              {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+              {/* <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a> */}
+          {/* </figcaption>      */}
+      {/* </figure>     */}
+    {/* </div> */}
+// 
+    {/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">     */}
+      {/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms">     */}
+          {/* <img src="images/dormitorio1.jpg" alt="portfolio-2"></img>   */}
+          {/* <figcaption class="text-center"> */}
+              {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+              {/* <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a> */}
+          {/* </figcaption>     */}
+      {/* </figure>     */}
+// 
+    {/* </div>     */}
+// 
+    {/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item">     */}
+// 
+    {/* <figure class="wow zoomIn" data-wow-delay="900ms" data-wow-duration="1000ms"> */}
+    {/* <img src="images/cocina1.jpg" alt="portfolio-3"></img> */}
+    {/* <figcaption class="text-center"> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a> */}
+    {/* </figcaption> */}
+// 
+{/* </figure> */}
+// 
+{/* </div> */}
+// 
+{/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+// 
+{/* <figure class="wow zoomIn" data-wow-delay="1000ms" data-wow-duration="1000ms"> */}
+    {/* <img src="images/baño1.jpg" alt="portfolio-4"></img> */}
+    {/* <figcaption class="text-center"> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-lightbulb-o"></i></a> */}
+    {/* </figcaption> */}
+{/* </figure> */}
+{/* </div> */}
+// 
+{/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+// 
+{/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms"> */}
+    {/* <img src="images/people1.jpg" alt="portfolio-2"></img> */}
+    {/* <figcaption class="text-center"> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a> */}
+    {/* </figcaption> */}
+// 
+{/* </figure> */}
+// 
+{/* </div> */}
+{/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+// 
+{/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms"> */}
+    {/* <img src="images/pasillo1.jpg" alt="portfolio-2"></img> */}
+    {/* <figcaption class="text-center"> */}
+        {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+            {/* <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a> */}
+        {/* </figcaption> */}
+    {/*  */}
+    {/* </figure> */}
+    {/*  */}
+    {/* </div> */}
+    {/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+    {/*  */}
+    {/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms"> */}
+        {/* <img src="images/temperatuaa.jpg" alt="portfolio-2"></img> */}
+        {/* <figcaption class="text-center"> */}
+            {/* <a class="portfolio-icon" href="#"><i class="fa fa-thermometer"></i></a> */}
+    {/* </figure> */}
+    {/* </div> */}
+    {/*  */}
+    {/* <div class="col-md-3 col-sm-6 col-xs-12 portfolio-item"> */}
+    {/*  */}
+    {/* <figure class="wow zoomIn" data-wow-delay="800ms" data-wow-duration="1000ms"> */}
+        {/* <img src="images/encendedor1.jpg" alt="portfolio-2"></img> */}
+        {/* <figcaption class="text-center"> */}
+            {/* <a class="portfolio-icon" href="#"><i class="fa fa-sign-in"></i></a> */}
+            {/* <a class="portfolio-icon" href="#"><i class="fa fa-male"></i></a> */}
+        {/* </figcaption> */}
+    {/* </figure> */}
+    {/* </div> */}
+{/* </section> */}
+    {/* ) */}
+    {/*  */}
+// 
+{/* const Head = () => ( */}
+  // <head>
+    {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossOrigin="anonymous"/> */}
+    {/* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossOrigin="anonymous"/> */}
+  {/* </head> */}
+//)
 
 const HomepageHeading = ({ mobile }) => (
   <Container text>

@@ -487,10 +487,10 @@
 /* end navbar */
 
 /* header */
-.header3 {
-    background: url('../images/header1.jpg') no-repeat scroll center -90px; / cover ;
-    font-family: 'Titillium Web', sans-serif;
-}
+/* .header3 { */
+    /* background: url('../images/header1.jpg') no-repeat scroll center -90px; / cover ; */
+    /* font-family: 'Titillium Web', sans-serif; */
+/* } */
 
 .header3 .intro{
     min-height: 100vh;
@@ -657,10 +657,10 @@
 /* end navbar */
 
 /* header */
-.header4 {
-    background: url('../images/header1.jpg') no-repeat scroll center -90px; / cover ;
-    font-family: 'Titillium Web', sans-serif;
-}
+/* .header4 { */
+    /* background: url('../images/header1.jpg') no-repeat scroll center -90px; / cover ; */
+    /* font-family: 'Titillium Web', sans-serif; */
+/* } */
 
 .header4 .tag-line {
     color: #f8f8f8;
