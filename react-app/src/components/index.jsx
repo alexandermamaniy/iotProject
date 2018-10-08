@@ -27,6 +27,7 @@ import Home from './pages/Home'
 import Publico from './pages/Publico'
 import {sendGET} from './helpers/methods'
 import LoginForm from './pages/LoginForm'
+
 const hostname = 'http://localhost:3000'
 
 class App extends Component {
@@ -276,5 +277,6 @@ const PrivateRouteForm = ({component: Component, authed, rest}) => (
     }
   />
 )
+
 
 export default App

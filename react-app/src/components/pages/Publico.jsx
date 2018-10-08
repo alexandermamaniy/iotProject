@@ -1,7 +1,11 @@
 import React from 'react'
+import MessageList from './MessageList'
 
 const Publico = () => (
-  <h1>publcicooooooo!!!</h1>
+  <div>
+    <h1>publcicooooooo!!!</h1>
+    <MessageList/>
+  </div>
 )
 
 export default Publico
