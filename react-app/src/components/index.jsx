@@ -28,6 +28,8 @@ import Publico from './pages/Publico'
 import {sendGET} from './helpers/methods'
 import LoginForm from './pages/LoginForm'
 
+import MessageList from './pages/MessageList'
+
 const hostname = 'http://localhost:3000'
 
 class App extends Component {
@@ -69,7 +71,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <ResponsiveContainer authed={this.state.authed} isLogin={this.state.isLogin} setIsLogin={this.setIsLogin} >
+          <MessageList {...this.props} />
+          <ResponsiveContainer {...this.props} authed={this.state.authed} isLogin={this.state.isLogin} setIsLogin={this.setIsLogin} >
           </ResponsiveContainer>
           
         </div>
@@ -134,7 +137,7 @@ class DesktopContainer extends Component {
                     </Container>
                   }
                 </Menu>  
-                <Publico/>
+                <Publico {...this.props}/>
                 </div>
             }
             
@@ -206,9 +209,9 @@ MobileContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const ResponsiveContainer = ({ children, authed, isLogin, setIsLogin }) => (
+const ResponsiveContainer = ({ children, authed, isLogin, setIsLogin, ...props }) => (
   <div>
-    <DesktopContainer authed={authed} isLogin={isLogin} setIsLogin={setIsLogin} >{children}</DesktopContainer>
+    <DesktopContainer {...props} authed={authed} isLogin={isLogin} setIsLogin={setIsLogin} >{children}</DesktopContainer>
     <MobileContainer authed={authed} isLogin={isLogin} setIsLogin={setIsLogin} >{children}</MobileContainer>
   </div>
 )
