@@ -1,3 +1,4 @@
+
 @charset "UTF-8";
 
 /*=====================================================================
@@ -11,7 +12,7 @@
 **********  Table of Main css  *************
 
 1.	headers
-2.	slideshows
+2.	slideshows		
 3.	content sections
 4.  blogs
 5.  dividers
@@ -1827,7 +1828,7 @@
 .header8 {
     position: relative;
     background-color: #01BF86;
-    background: url('../images/header8.jpg') no-repeat scroll center 69px / cover ;
+    background: url('../images/1.jpg') no-repeat scroll center 69px / cover ;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -7825,6 +7826,44 @@ hr.shadowDown {
     word-spacing: 1px;
 }
 
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
     
 /*/////////////////////// End ///////////////////////////////*/
 
